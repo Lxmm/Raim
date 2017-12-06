@@ -26,8 +26,10 @@ public class UserController {
 
     @RequestMapping(value = "/queryAllUserInfo")
     public String queryAllUserInfo(HttpServletRequest request, Model model){
-
         List<User> userList = userService.queryAllUserInfo();
+
+//        String userName =userList.get(0).getUsername();
+//        model.addAttribute("userName",userName);
         model.addAttribute("userList",userList);
         return "userList";
     }

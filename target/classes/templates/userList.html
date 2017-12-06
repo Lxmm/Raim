@@ -1,27 +1,26 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>用户列表</title>
+    <title>hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <div class="row" style="text-align: center">
-        <div class="col-md-12">
-            <table class="table table-hover">
-                <tr>
-                    <th>用户名</th>
-                    <th>密码</th>
-                    <th>操作</th>
-                </tr>
+<!--@thymesVar id="userName" type="java.lang.String"-->
+<!--<p th:text="'Hello！, ' + ${userName} + '!'" >3333</p>-->
 
-            </table>
-        </div>
-    </div>
-
-
-    </div>
-
-
+<table>
+    <tr>
+        <th>用户名</th>
+        <th>密码</th>
+    </tr>
+    <!--@thymesVar id="userList" type="java.util.List"-->
+    <tr th:each="user : ${userList}">
+        <!--@thymesVar id="username" type="java.lang.String"-->
+        <td th:text="${user.username}"></td>
+        <!--@thymesVar id="username" type="java.lang.String"-->
+        <td th:text="${user.password}"></td>
+    </tr>
+</table>
 
 </body>
 </html>
-
