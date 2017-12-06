@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head id="Head1"><title>
+    系统概述-民航GNSS导航卫星完好性监测系统
+</title>
+    <style type="text/css">
+        .tit2
+        {
+            font-weight: 700;
+            font-size: small;
+        }
+        .style2
+        {
+            font-weight: normal;
+            font-size: small;
+        }
+
+        .left_title
+        {
+            vertical-align:bottom;
+            text-align:center;
+            line-height:30px;
+        }
+
+
+    </style>
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <!--<link href="../bootstrap/css/bootstrap.css" rel="stylesheet" />-->
+    <script src="../js/menu.js" type="text/javascript"></script>
+    <script src="../js/main_nav.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/css.css" />
+    <!--<link rel="stylesheet" href="../css/layui.css"/>-->
+    <script src="../js/layui.js"></script>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var theForm = document.forms['form1'];
+        if (!theForm) {
+            theForm = document.form1;
+        }
+        function __doPostBack(eventTarget, eventArgument) {
+            if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                theForm.__EVENTTARGET.value = eventTarget;
+                theForm.__EVENTARGUMENT.value = eventArgument;
+                theForm.submit();
+            }
+        }
+        //]]>
+    </script>
+</head>
+<body>
+<form method="post" action="announce.html" id="form1">
+    <div class="aspNetHidden">
+        <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+        <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE2MDk5MjA0NjIPZBYCAgMPZBYCAgMPZBYMZg8PFgIeBFRleHQFGzIwMTflubQxMeaciDI05pelIOaYn+acn+S6lGRkAgEPDxYCHwAFEOiuv+mXruaAu+mHjzoyMzJkZAICDxYCHgdWaXNpYmxlaGQCAw8WAh8BaGQCBA8PFgQfAAUN6KGM5Lia55So5oi3Oh8BZ2RkAgUPDxYCHwAFBGduc3NkZGRNFy7CBuT0hnkDDcW/Dts54Eo0Pf6Jx++QCiPFiNgJZA==" />
+    </div>
+    <div class="aspNetHidden">
+        <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAwLuytyZDwKyuOrTDwL2iKyTBVunbt11mSnvAVHpwzTfWhTHlHvq5CE+YeOFdKE0anT4" />
+    </div>
+    <div class="zhong">
+        <div th:replace="header :: header"></div>
+        <div class="main">
+            <div th:replace="raimleftpanel :: raimleftpanel"></div>
+            <div class="right">
+                <div class="daohang">首页 > RAIM预测 > <span>关于 </span></div>
+                <div class="right_title"><b>关于</b></div>
+                <div class="xiangqingbg">
+                    <br />
+                    <table style="margin-top:30px;" width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td>
+                                <div class="Section1" style="layout-grid:15.6pt;">
+                                    <p style="margin-left:7.45pt;mso-para-margin-left:.71gd;text-indent:19.45pt;mso-char-indent-count:2.16"><span lang="EN-US" style="font-size:9.0pt;line-height:150%;font-family:\02CE\0325;color:black">（<span lang="EN-US">1</span>）机场<span lang="EN-US">NPA</span>预测：依据<span lang="EN-US">NPA</span>的标准（完好性报警水平门限为<span lang="EN-US">556m</span><span lang="EN-US">(0.3</span>海里)）对全国<span lang="EN-US">185</span>个机场进行<span lang="EN-US">3</span>天的<span lang="EN-US">RAIM</span>预测，将<span lang="EN-US">RAIM</span>预测结果通过图形和文本两种方式显示出来。用户选择“机场”（最多至<span lang="EN-US">5</span>个）、“仰角”和输出形式后点击“预测”即可输出机场<span lang="EN-US">NPA</span>的预测结果。<span lang="EN-US"></span></span></p>
+                                    <br />
+                                    <p style="margin-left:7.45pt;mso-para-margin-left:.71gd;text-indent:19.45pt;mso-char-indent-count:2.16"><span lang="EN-US" style="font-size:9.0pt;line-height:150%;font-family:\02CE\0325;color:black">（<span lang="EN-US">2</span>）终端区预测：依据完好性报警水平门限<span lang="EN-US">1</span>海里，对全国<span lang="EN-US">185</span>个机场进行<span lang="EN-US">3</span>天的<span lang="EN-US">RAIM</span>预测，将<span lang="EN-US">RAIM</span>预测结果通过图形和文本两种方式显示出来。用户选择“机场”（最多至<span lang="EN-US">5</span>个）、“仰角”和输出形式后点击“预测”即可输出终端区的预测结果。<span lang="EN-US"></span></span></p>
+                                    <br />
+                                    <p style="margin-left:7.45pt;mso-para-margin-left:.71gd;text-indent:19.45pt;mso-char-indent-count:2.16"><span lang="EN-US" style="font-size:9.0pt;line-height:150%;font-family:\02CE\0325;color:black">（<span lang="EN-US">3</span>）<span lang="EN-US">GPS</span>卫星状态信息：显示预测时间范围内（从当前时间开始的<span lang="EN-US">3</span>天）<span lang="EN-US">GPS</span>卫星信息，包括卫星历书给出的信息和来自<span lang="EN-US">NANU</span>和<span lang="EN-US">NOTAM</span>报文的卫星<span class="GramE">不</span>可用信息。<span lang="EN-US"></span></span></p>
+                                    <br />
+                                    <p style="margin-left:7.45pt;mso-para-margin-left:.71gd;text-indent:19.45pt;mso-char-indent-count:2.16"><span lang="EN-US" style="font-size:9.0pt;line-height:150%;font-family:\02CE\0325;color:black">（<span lang="EN-US">4</span>）区域预测：给出指定区域按网格划分后对特定网格的预测结果，预测时根据指定的精度标准进行，目前给出了中国区域的网格预测结果。该种预测包括：<span lang="EN-US"></span></span></p>
+                                    <br />
+
+                                    <p class="MsoNormal" align="left" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:63.25pt;text-align:left;text-indent:-21.0pt;mso-pagination:
+widow-orphan;layout-grid-mode:char"><span lang="EN-US" style="font-size:9.0pt;
+font-family:Wingdings;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt">n</span><span lang="EN-US" style="font-size:9.0pt;color:black;mso-font-kerning:
+0pt">&nbsp;&nbsp;</span><span style="font-size:9.0pt;font-family:宋体;mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt">静态预测：给定时间点的区域网格预测。用户选择预测时间点后点击“开始预测”即可输出指定时间点的中国区域的预测结果。<span lang="EN-US"></span></span></p>
+                                    <br />
+                                    <p class="MsoNormal" align="left" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:63.25pt;text-align:left;text-indent:-21.0pt;mso-pagination:
+widow-orphan;layout-grid-mode:char"><span lang="EN-US" style="font-size:9.0pt;
+font-family:Wingdings;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt">n</span><span lang="EN-US" style="font-size:9.0pt;color:black;mso-font-kerning:
+0pt">&nbsp;&nbsp;</span><span style="font-size:9.0pt;font-family:宋体;mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt">统计预测：给定时间段的区域网格统计预测，采用最长不可用时间作为统计量，既给定的时间段内某区域网格最长的不可用时间。用户选择预测起始时间点和结束时间点后点击“开始预测”即可输出指定时间区段内中国区域各网格内最长的不可用时间。<span lang="EN-US"></span></span></p>
+                                    <br />
+                                    <p style="margin-left:7.45pt;mso-para-margin-left:.71gd;text-indent:19.45pt;
+mso-char-indent-count:2.16"><span lang="EN-US" style="font-size:9.0pt;line-height:
+150%;font-family:\02CE\0325;color:black">（<span lang="EN-US">5</span>）航路预测功能：针对给出配置的<span lang="EN-US">5</span>条航路进行<span lang="EN-US">RAIM</span>预测，给出相应的预测结果。预测时将航路划分为航段，针对每个航段进行预测。<span lang="EN-US"></span></span></p>
+                                    <br />
+                                    <p class="MsoNormal" align="left" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:63.25pt;text-align:left;text-indent:-21.0pt;mso-pagination:
+widow-orphan;layout-grid-mode:char"><span lang="EN-US" style="font-size:9.0pt;
+font-family:Wingdings;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt">n</span><span lang="EN-US" style="font-size:9.0pt;color:black;mso-font-kerning:
+0pt">&nbsp;&nbsp;</span><span style="font-size:9.0pt;font-family:宋体;mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt">航路预测：根据用户指定的预测标准，给出指定航路在<span lang="EN-US">24</span>小时内的可用性信息，将<span lang="EN-US">24</span>小时分时段的基础预测数据与标准进行比对，如果低于标准则该时段的航路<span class="GramE">不</span>可用。<span lang="EN-US"></span></span></p>
+                                    <br />
+                                    <p class="MsoNormal" align="left" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:63.25pt;text-align:left;text-indent:-21.0pt;mso-pagination:
+widow-orphan;layout-grid-mode:char"><span lang="EN-US" style="font-size:9.0pt;
+font-family:Wingdings;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt">n</span><span lang="EN-US" style="font-size:9.0pt;color:black;mso-font-kerning:
+0pt">&nbsp;&nbsp;</span><span style="font-size:9.0pt;font-family:宋体;mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt">航路分析：根据用户指定的航路和预测时段将其基础预测结果按飞行时段进行区段结果的显示。<span lang="EN-US"></span></span></p>
+                                    <!--<p style='margin-left:7.45pt;mso-para-margin-left:.71gd;text-indent:19.45pt;-->
+<!--mso-char-indent-count:2.16'><span lang=EN-US style='font-size:9.0pt;line-height:-->
+<!--150%;font-family:\02CE\0325;color:black'>（<span lang=EN-US>3</span>）<span lang=EN-US>GPS</span>卫星状态信息：显示预测时间范围内（从当前时间开始的<span-->
+                                            <!--lang=EN-US>3</span>天）<span lang=EN-US>GPS</span>卫星信息，包括卫星历书给出的信息和来自<span-->
+                                            <!--lang=EN-US>NANU</span>和<span lang=EN-US>NOTAM</span>报文的卫星<span class=GramE>不</span>可用信息。<span-->
+                                            <!--lang=EN-US></span></span></p>-->
+                                    <!--<br />-->
+                                    <!--<p style='margin-left:7.45pt;mso-para-margin-left:.71gd;text-indent:19.45pt;-->
+<!--mso-char-indent-count:2.16'><span lang=EN-US style='font-size:9.0pt;line-height:-->
+<!--150%;font-family:\02CE\0325;color:black'>（<span lang=EN-US>4</span>）区域预测：给出指定区域按网格划分后对特定网格的预测结果，预测时根据指定的精度标准进行，目前给出了中国区域的网格预测结果。该种预测包括：-->
+<!--<span lang=EN-US></span></span></p>-->
+
+                                    <!--<p class="MsoNormal" align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:-->
+<!--auto;margin-left:63.25pt;text-align:left;text-indent:-21.0pt;mso-pagination:-->
+<!--widow-orphan;layout-grid-mode:char'><span lang=EN-US style='font-size:9.0pt;-->
+<!--font-family:Wingdings;mso-bidi-font-family:宋体;color:black;mso-font-kerning:-->
+<!--0pt'>n</span><span lang=EN-US style='font-size:9.0pt;color:black;mso-font-kerning:-->
+<!--0pt'>&nbsp;&nbsp;</span><span style='font-size:9.0pt;font-family:宋体;mso-bidi-font-family:-->
+<!--宋体;color:black;mso-font-kerning:0pt'>静态预测：给定时间点的区域网格预测。用户选择预测时间点后点击“开始预测”即可输出指定时间点的中国区域的预测结果。<span-->
+                                            <!--lang=EN-US></span></span></p>-->
+                                    <!--<br />-->
+                                    <!--<p class="MsoNormal" align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:-->
+<!--auto;margin-left:63.25pt;text-align:left;text-indent:-21.0pt;mso-pagination:-->
+<!--widow-orphan;layout-grid-mode:char'><span lang=EN-US style='font-size:9.0pt;-->
+<!--font-family:Wingdings;mso-bidi-font-family:宋体;color:black;mso-font-kerning:-->
+<!--0pt'>n</span><span lang=EN-US style='font-size:9.0pt;color:black;mso-font-kerning:-->
+<!--0pt'>&nbsp;&nbsp;</span><span style='font-size:9.0pt;font-family:宋体;mso-bidi-font-family:-->
+<!--宋体;color:black;mso-font-kerning:0pt'>统计预测：给定时间段的区域网格统计预测，采用最长不可用时间作为统计量，既给定的时间段内某区域网格最长的不可用时间。用户选择预测起始时间点和结束时间点后点击“开始预测”即可输出指定时间区段内中国区域各网格内最长的不可用时间。<span-->
+                                            <!--lang=EN-US></span></span></p>-->
+                                    <!--<br />-->
+                                    <!--<p style='margin-left:7.45pt;mso-para-margin-left:.71gd;text-indent:19.45pt;-->
+<!--mso-char-indent-count:2.16'><span lang=EN-US style='font-size:9.0pt;line-height:-->
+<!--150%;font-family:\02CE\0325;color:black'>（<span lang=EN-US>5</span>）航路预测功能：针对给出配置的<span-->
+                                            <!--lang=EN-US>5</span>条航路进行<span lang=EN-US>RAIM</span>预测，给出相应的预测结果。预测时将航路划分为航段，针对每个航段进行预测。<span-->
+                                            <!--lang=EN-US></span></span></p>-->
+                                    <!--<br />-->
+
+                                    <!--<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:-->
+<!--auto;margin-left:63.25pt;text-align:left;text-indent:-21.0pt;mso-pagination:-->
+<!--widow-orphan;layout-grid-mode:char'><span lang=EN-US style='font-size:9.0pt;-->
+<!--font-family:Wingdings;mso-bidi-font-family:宋体;color:black;mso-font-kerning:-->
+<!--0pt'>n</span><span lang=EN-US style='font-size:9.0pt;color:black;mso-font-kerning:-->
+<!--0pt'>&nbsp;&nbsp;</span><span style='font-size:9.0pt;font-family:宋体;mso-bidi-font-family:-->
+<!--宋体;color:black;mso-font-kerning:0pt'>航路预测：根据用户指定的预测标准，给出指定航路在<span lang=EN-US>24</span>小时内的可用性信息，将<span-->
+                                            <!--lang=EN-US>24</span>小时分时段的基础预测数据与标准进行比对，如果低于标准则该时段的航路<span class=GramE>不</span>可用。<span-->
+                                            <!--lang=EN-US></span></span></p>-->
+                                    <!--<br />-->
+                                    <!--<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:-->
+<!--auto;margin-left:63.25pt;text-align:left;text-indent:-21.0pt;mso-pagination:-->
+<!--widow-orphan;layout-grid-mode:char'><span lang=EN-US style='font-size:9.0pt;-->
+<!--font-family:Wingdings;mso-bidi-font-family:宋体;color:black;mso-font-kerning:-->
+<!--0pt'>n</span><span lang=EN-US style='font-size:9.0pt;color:black;mso-font-kerning:-->
+<!--0pt'>&nbsp;&nbsp;</span><span style='font-size:9.0pt;font-family:宋体;mso-bidi-font-family:-->
+<!--宋体;color:black;mso-font-kerning:0pt'>航路分析：根据用户指定的航路和预测时段将其基础预测结果按飞行时段进行区段结果的显示。<span-->
+                                            <!--lang=EN-US></span></span></p>-->
+
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+            <div th:replace="footer :: footer"></div>
+        </div>
+    </div>
+</form>
+</body>
+</html>

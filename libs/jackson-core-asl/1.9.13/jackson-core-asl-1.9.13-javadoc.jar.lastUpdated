@@ -1,0 +1,5 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Wed May 20 11:38:24 CST 2015
+http\://maven.oschina.net/content/groups/public/.lastUpdated=1432093104991
+default-http\://192.168.243.69\:8081/nexus/content/groups/public/.lastUpdated=1432018720511
+http\://192.168.243.69\:8081/nexus/content/groups/public/.error=Could not transfer artifact org.codehaus.jackson\:jackson-core-asl\:jar\:javadoc\:1.9.13 from/to nexus (http\://192.168.243.69\:8081/nexus/content/groups/public)\: No response received after 60000

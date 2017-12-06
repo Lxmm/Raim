@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <title>民航GNSS导航卫星完好性监测系统V1.0.0</title>
+    <link rel="stylesheet" href="./css/layui.css"/>
+</head>
+<body>
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header" th:fragment="header">
+        <div class="banner">
+            <table width="760" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                <tr>
+                    <td> <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="760" height="118"> <param name="movie" value="image/top.swf"/> <param name="quality" value="high"/> <param name="menu" value="false"/> <embed src="image/top.swf" wmode="transparent" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="760" height="118" /> </object> </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="mainmenu_body">
+            <!--主导航开始-->
+            <div id="mainmenu_top">
+                <div class="menu-lft">
+                    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                        <tbody>
+                        <tr>
+                            <td><span id="weMenu1_time" style="color:White;">2017年11月24日 星期五</span> </td>
+                            <td>
+                                <ul>
+                                    <li class="home"><a href="index.html" id="mm1" onmouseover="showM(this,1)" onmouseout="OnMouseLeft()" target="_parent">网络首页</a></li>
+                                    <li><a href="introduction.html" id="mm2" onmouseover="showM(this,2)" onmouseout="OnMouseLeft()" target="_parent">简介</a></li>
+                                    <li><a href="raimintro.html" id="mm3" onmouseover="showM(this,3)" onmouseout="OnMouseLeft()" target="_parent">RAIM预测</a></li>
+                                    <li><a href="about.html" id="mm4" onmouseover="showM(this,4)" onmouseout="OnMouseLeft()" target="_parent">关于我们</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="RegisterAndCount">
+                    <div style="margin-top:0px;font-weight: bold;height:20px;width:100px;float:left;color:#0033CC; font-size: small; text-align: left;">
+                        <span id="weMenu1_lbCount"></span>
+                    </div>
+                    <div class="loginRegister">
+                        <a href="userLogin.html" id="weMenu1_alogin">登录 </a> &nbsp;&nbsp;
+                        <a href="userRegister.html" id="weMenu1_aregedit">注册</a>  &nbsp;&nbsp;
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

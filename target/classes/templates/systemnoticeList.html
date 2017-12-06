@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head id="Head1"><title>
+    系统概述-民航GNSS导航卫星完好性监测系统
+</title>
+    <style type="text/css">
+        .tit2
+        {
+            font-weight: 700;
+            font-size: small;
+        }
+        .style2
+        {
+            font-weight: normal;
+            font-size: small;
+        }
+
+        .left_title
+        {
+            vertical-align:bottom;
+            text-align:center;
+            line-height:30px;
+        }
+
+
+    </style>
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <!--<link href="../bootstrap/css/bootstrap.css" rel="stylesheet" />-->
+    <script src="../js/menu.js" type="text/javascript"></script>
+    <script src="../js/main_nav.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/css.css" />
+    <!--<link rel="stylesheet" href="../css/layui.css"/>-->
+    <script src="../js/layui.js"></script>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var theForm = document.forms['form1'];
+        if (!theForm) {
+            theForm = document.form1;
+        }
+        function __doPostBack(eventTarget, eventArgument) {
+            if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                theForm.__EVENTTARGET.value = eventTarget;
+                theForm.__EVENTARGUMENT.value = eventArgument;
+                theForm.submit();
+            }
+        }
+        //]]>
+    </script>
+</head>
+<body>
+<form method="post" action="systemnoticeList.html" id="form1">
+    <div class="aspNetHidden">
+        <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+        <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE2MDk5MjA0NjIPZBYCAgMPZBYCAgMPZBYMZg8PFgIeBFRleHQFGzIwMTflubQxMeaciDI05pelIOaYn+acn+S6lGRkAgEPDxYCHwAFEOiuv+mXruaAu+mHjzoyMzJkZAICDxYCHgdWaXNpYmxlaGQCAw8WAh8BaGQCBA8PFgQfAAUN6KGM5Lia55So5oi3Oh8BZ2RkAgUPDxYCHwAFBGduc3NkZGRNFy7CBuT0hnkDDcW/Dts54Eo0Pf6Jx++QCiPFiNgJZA==" />
+    </div>
+    <div class="aspNetHidden">
+        <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAwLuytyZDwKyuOrTDwL2iKyTBVunbt11mSnvAVHpwzTfWhTHlHvq5CE+YeOFdKE0anT4" />
+    </div>
+    <div class="zhong">
+        <div th:replace="header :: header"></div>
+        <div class="main">
+            <div th:replace="aboutleftpanel :: aboutleftpanel"></div>
+            <div class="right">
+                <div class="daohang">首页 > 关于我们  > 公告列表</div>
+                <div class="right_title"><b>公告列表</b>
+                </div>
+                <div class="xiangqingList">
+                    <table align="center" border="0" cellpadding="0" cellspacing="1" style="margin-top:30px;height: 26px;width:500px; ">
+                        <tr>
+                            <td><div style="float:right;"></div></td>
+                        </tr>
+                        <tr >
+                            <th height="25">
+
+                                <!-- AspNetPager V6.0.0 for VS2005  Copyright:2003-2006 Webdiyer (www.webdiyer.com) -->
+                                <!--记录总数只有一页，AspNetPager已自动隐藏，若需在只有一页数据时显示AspNetPager，请将AlwaysShow属性值设为true！-->
+                                <!-- AspNetPager V6.0.0 for VS2005 End -->
+
+
+                            </th>
+                        </tr>
+                    </table>
+                    <div>
+
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+            <div th:replace="footer :: footer"></div>
+        </div>
+    </div>
+</form>
+</body>
+</html>

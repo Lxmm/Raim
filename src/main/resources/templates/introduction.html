@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head id="Head1"><title>
+    系统概述-民航GNSS导航卫星完好性监测系统
+</title>
+    <style type="text/css">
+        .tit2
+        {
+            font-weight: 700;
+            font-size: small;
+        }
+        .style2
+        {
+            font-weight: normal;
+            font-size: small;
+        }
+
+        .left_title
+        {
+            vertical-align:bottom;
+            text-align:center;
+            line-height:30px;
+        }
+
+
+    </style>
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <!--<link href="../bootstrap/css/bootstrap.css" rel="stylesheet" />-->
+    <script src="../js/menu.js" type="text/javascript"></script>
+    <script src="../js/main_nav.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/css.css" />
+    <!--<link rel="stylesheet" href="../css/layui.css"/>-->
+    <script src="../js/layui.js"></script>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var theForm = document.forms['form1'];
+        if (!theForm) {
+            theForm = document.form1;
+        }
+        function __doPostBack(eventTarget, eventArgument) {
+            if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                theForm.__EVENTTARGET.value = eventTarget;
+                theForm.__EVENTARGUMENT.value = eventArgument;
+                theForm.submit();
+            }
+        }
+        //]]>
+    </script>
+</head>
+<body>
+<form method="post" action="introduction.html" id="form1">
+    <div class="aspNetHidden">
+        <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+        <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE2MDk5MjA0NjIPZBYCAgMPZBYCAgMPZBYMZg8PFgIeBFRleHQFGzIwMTflubQxMeaciDI05pelIOaYn+acn+S6lGRkAgEPDxYCHwAFEOiuv+mXruaAu+mHjzoyMzJkZAICDxYCHgdWaXNpYmxlaGQCAw8WAh8BaGQCBA8PFgQfAAUN6KGM5Lia55So5oi3Oh8BZ2RkAgUPDxYCHwAFBGduc3NkZGRNFy7CBuT0hnkDDcW/Dts54Eo0Pf6Jx++QCiPFiNgJZA==" />
+    </div>
+    <div class="aspNetHidden">
+        <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAwLuytyZDwKyuOrTDwL2iKyTBVunbt11mSnvAVHpwzTfWhTHlHvq5CE+YeOFdKE0anT4" />
+    </div>
+    <div class="zhong">
+        <div th:replace="header :: header"></div>
+        <div class="main">
+            <div th:replace="introductionleftpanel :: introductionleftpanel"></div>
+            <div class="right">
+                <div class="daohang">首页 > 简介 > <span>系统概述</span></div>
+                <div class="right_title"><b>系统概述</b>
+                </div>
+                <div class="xiangqing">
+                    <table style="margin: auto" width="95%"  border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td height="25"><b>&nbsp;<img src="image/bull_infomation_01.gif" width="11" height="11"/></b>&nbsp;<span
+                                    class="style2"><a href="#01" target="_self">导航系统分类及要求</a></span></td>
+                        </tr>
+                        <tr>
+                            <td height="25"><b>&nbsp;<img src="image/bull_infomation_01.gif" width="11" height="11"/></b>&nbsp;<span
+                                    class="style2"><a href="#02" target="_self">民用航空导航使用GPS卫星导航系统的优点</a></span></td>
+                        </tr>
+                        <tr>
+                            <td height="25"><b>&nbsp;<img src="image/bull_infomation_01.gif" width="11" height="11"/></b>&nbsp;<span
+                                    class="style2"><a href="#03" target="_self">民用航空对GPS卫星完好性的要求</a></span></td>
+                        </tr>
+                        <tr>
+                            <td height="25"><b>&nbsp;<img src="image/bull_infomation_01.gif" width="11" height="11"/></b>&nbsp;<span
+                                    class="style2"><a href="#04" target="_self">GPS卫星完好性增强技术的发展概述</a></span></td>
+                        </tr>
+                        <tr>
+                            <td height="25"><b>&nbsp;<img src="image/bull_infomation_01.gif" width="11" height="11"/></b>&nbsp;<span
+                                    class="style2"><a href="#05" target="_self">GPS卫星完好性增强技术在国外的发展概况</a></span></td>
+                        </tr>
+                    </table>
+                    <table width="95%"  border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td height="30" valign="middle" class="tit2"><a name="01"></a>1、导航系统分类及要求</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><p>&nbsp;&nbsp;&nbsp;&nbsp;航空特别是民用航空是安全性要求极高的部门，用于航空的导航系统要满足精度、完好性、可用性和连续性要求。航空导航系统按其能满足上述要求的程度划分为辅助航空导航系统、主用航空导航系统和唯一航空导航系统三类。</p><br></br>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;辅助航空导航系统必需满足规定的操作或阶段的精度和完好性要求，对可用性和连续性不做要求。因此，配装辅助航空导航系统的民用航空器必需同时配装有主用航空导航系统（或唯一航空导航系统）。</p><br></br>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;主用航空导航系统必需满足规定的操作或阶段的精度和完好性要求，不需全部满足可用性和连续性要求，其安全性借助于将飞行限制在特定的时期和通过适当的程序限制来保证。对已经配装了主用航空导航系统的民用航空器而言，不要求配装唯一航空导航系统来支持。</p>
+                                <p>唯一航空导航系统必需满足规定的操作或阶段的精度、完好性、可用性和连续性要求。因此，配装有唯一航空导航系统的民用航空器而言，并不要求其装配其它航空导航系统，但也不排斥装配其它航空导航系统。</p></td>
+                        </tr>
+                        <tr>
+                            <td height="30"><div align="right"><img src="image/gotop.gif" width="15" height="15"/><a href="#" target="_self">返回顶部</a>&nbsp;&nbsp;</div></td>
+                        </tr>
+                    </table>
+                    <table width="95%"  border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td height="30" class="tit2"><a name="02"></a>2、民用航空导航使用GPS卫星导航系统的优点</td>
+                        </tr>
+                        <tr>
+                            <td><p>&nbsp;&nbsp;&nbsp;&nbsp;GPS卫星导航系统在全世界范围内能同时为陆海空用户提供连续精确的三维位置、速度和时间信息，在军事和民用方面得到了推广普及。世界民用航空界推动着全球卫星导航系统（GNSS）和各种增强系统的发展与应用。国际民航组织（ICAO）定义了一种至少包含一个或多个卫星导航系统的全球导航卫星系统（GNSS），其连续的全球覆盖能力使得飞机能够在可遵循的条件下直接从一个地方飞到另一个地方。利用GNSS接收机的高精度定位信息，机载航空电子设备中包含一个数据链功能可将飞机位置实时发送到相关飞机和空中交通管制中心（ATC），实现自动相关监视（ADS）。这样为ATC提供的防撞监视和使用最佳航路能明显降低航行时间和油耗，已形成ICAO未来空中航行系统的重要组成部分。</p>
+                                <p>到目前为止，我国民航在本土东部繁忙区域的航路和终端区主要使用VOR/DME和NDB，在西部及边远地区主要依靠惯性导航系统。在东部地区为保障飞机在规定的航路宽度内飞行，必需有一定密度布置的VOR/DME地面台，现已布置了100多个VOR/DME信标台，仍有些地方未实现覆盖，需增设台站解决。而西部地区特别是山区、沙漠边远地区，建台困难，实现所要求的覆盖非常困难，只得依靠惯性导航系统，造成导航误差大，手段单一。如果将GPS用于我国民航，在东部地区将GPS作为辅助导航系统与VOR/DME和NDB配合工作，可提高导航精度，避免再继续对VOR/DME和NDB投资，保证东部民用航空安全和高效率。在西部地区将GPS作为主用导航系统和惯性导航系统配合工作，实现投资少，导航精度、航行安全和效率明显提高。</p>
+                                <p>然而，正如前所述，GPS用于民用航空导航必需满足相应的要求。</p></td>
+                        </tr>
+                        <tr>
+                            <td height="30"><div align="right"><img src="image/gotop.gif" width="15" height="15"/><a href="#" target="_self">返回顶部</a>&nbsp;&nbsp;</div></td>
+                        </tr>
+                    </table>
+                    <table width="95%"  border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td height="30" class="tit2"><a name="03"></a>3、民用航空对GPS卫星完好性的要求</td>
+                        </tr>
+                        <tr>
+                            <td><p>&nbsp;&nbsp;&nbsp;&nbsp;无论GPS是作为辅助航空导航系统还是作为主用航空导航系统，都必需满足精度和完好性要求。对于GPS作为辅助航空导航系统，美国联邦航空局对GPS精度和完好性提出明确要求，如表1.1所示。</p></td>
+                        </tr>
+                        <tr>
+                            <td><div align="center">
+                                <table width="100%"  border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#666666">
+                                    <tr bgcolor="#FFFFFF">
+                                        <th height="20" rowspan="2" bgcolor="#FFFBEA"><div align="center">要求</div></th>
+                                        <th height="20" colspan="3" bgcolor="#FFFBEA"><div align="center">飞行阶段</div></th>
+                                    </tr>
+                                    <tr bgcolor="#FFFFFF">
+                                        <th height="20" bgcolor="#DEDFCF"><div align="center">航路区</div></th>
+                                        <th height="20" bgcolor="#DEDFCF"><div align="center">终端区</div></th>
+                                        <th height="20" bgcolor="#DEDFCF"><div align="center">非精密进近</div></th>
+                                    </tr>
+                                    <tr bgcolor="#FFFFFF">
+                                        <td height="20"><div align="center">源精度(2drms）</div></td>
+                                        <td height="20"><div align="center">1000m</div></td>
+                                        <td height="20"><div align="center">500m</div></td>
+                                        <td height="20"><div align="center">100m</div></td>
+                                    </tr>
+                                    <tr bgcolor="#EBEBEB">
+                                        <td height="20"><div align="center">告警门限</div></td>
+                                        <td height="20"><div align="center">2海里（3704m）</div></td>
+                                        <td height="20"><div align="center">1海里（1852m）</div></td>
+                                        <td height="20"><div align="center">0.3海里（556m）</div></td>
+                                    </tr>
+                                    <tr bgcolor="#FFFFFF">
+                                        <td height="20"><div align="center">最大允许告警率</div></td>
+                                        <td height="20"><div align="center">0.002次/h</div></td>
+                                        <td height="20"><div align="center">0.002次/h</div></td>
+                                        <td height="20"><div align="center">0.002次/h</div></td>
+                                    </tr>
+                                    <tr bgcolor="#EBEBEB">
+                                        <td height="20"><div align="center">允许告警延时</div></td>
+                                        <td height="20"><div align="center">＜30s</div></td>
+                                        <td height="20"><div align="center">＜10s</div></td>
+                                        <td height="20"><div align="center">＜10s</div></td>
+                                    </tr>
+                                    <tr bgcolor="#FFFFFF">
+                                        <td height="20"><div align="center">最小检测概率</div></td>
+                                        <td height="20"><div align="center">＞0.999</div></td>
+                                        <td height="20"><div align="center">＞0.999</div></td>
+                                        <td height="20"><div align="center">＞0.999</div></td>
+                                    </tr>
+                                    <tr bgcolor="#EBEBEB">
+                                        <td height="20"><div align="center">可用性</div></td>
+                                        <td height="20"><div align="center">＞0.99999</div></td>
+                                        <td height="20"><div align="center">＞0.99999</div></td>
+                                        <td height="20"><div align="center">＞0.99999</div></td>
+                                    </tr>
+                                </table>
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td height="20"><div align="center" class="memo">表3.1 作为辅助航空导航系统时对GPS精度和完好性要求</div></td>
+                        </tr>
+                        <tr>
+                            <td><p>&nbsp;&nbsp;&nbsp;&nbsp;由表3.1可知，GPS水平定位精度在有SA条件为100m（2drms），取消SA后为20～12m，能满足所规定的要求。 </p>
+                                <p>但是，GPS系统远不能满足表3.1所规定的完好性要求。航空导航系统完好性是定义为系统因故障或超差导致不能用作导航系统时，系统应向用户及时发出告警的能力。GPS系统卫星发出的导航电文中向用户提供了完好性信息，但有些系统故障主控站要经过半小时甚至几个小时才能发现，这对于民用航空应用是不允许的。为保证GPS系统完好性满足民用航空导航系统要求，美国FAA、欧洲及其它发达国家研究了多种增强GPS系统完好性的方法和技术途径，以保证GPS系统完好性满足作为航空导航系统要求。中国民航使用GPS系统也必需建立自己的完好性增强系统，满足我国民用航空导航系统要求。</p></td>
+                        </tr>
+                        <tr>
+                            <td height="30"><div align="right"><img src="image/gotop.gif" width="15" height="15"/><a href="#" target="_self">返回顶部</a>&nbsp;&nbsp;</div></td>
+                        </tr>
+                    </table>
+                    <table width="95%"  border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td height="20" class="tit2"><a name="04"></a>4、GPS卫星完好性增强技术的发展概述 </td>
+                        </tr>
+                        <tr>
+                            <td><p>&nbsp;&nbsp;&nbsp;&nbsp;从航路至非精密进近阶段，增强GPS系统完好性的方法通常有3种:</p>
+                                <p>·飞机自主完好性增强(AAIM),包括：接收机自主完好性监测(RAIM)，GPS/INS组合完好性校验</p>
+                                <p>·地面完好性监测，包括地面增强完好性监测(GAIM)，澳大利亚的陆基区域增强系统(GRAS)</p>
+                                <p>·星基增强系统(SBAS),包括：美国的广域增强系统(WAAS)；欧洲发展的EGNOS；日本的MSAS</p>
+                                <p>RAIM技术是设在GPS接收机中的一种算法，它利用GPS卫星的冗余信息，对GPS的多个导航解进行一致性检验，从而达到完好性监测的目的。按照GPS 24颗卫星的星座布局，将为世界提供99.99%以上5颗GPS卫星的覆盖。当机载GPS接收机视界内有5颗卫星时，由于最少只需要4颗便能产生飞机的定位信息，那么可以用这5颗卫星构成5个组合，每个组合包括4颗卫星，并分别求出相应的位置解。如果没有卫星信号异常，且卫星几何因子较好，那么这5个位置解会在一定的范围内保持一致。反之，如果其中一颗卫星信号异常，那么这5 个位置之间的差异就会很大。这样,利用RAIM就可迅速判定有无卫星信号异常。当有6颗可见星时，用RAIM就可判断出是哪一颗卫星信号异常，从而提高了GPS系统的完好性。</p>
+                                <p>目前，美国联邦航空局已规定，所有航空用GPS接收机必须具有RAIM功能，并且已批准具有RAIM功能的GPS接收机在越洋和边远区域航行阶段作为主用导航系统，在本土航路，终端区和非精密进近阶段作为辅助导航系统。RAIM的优点是，它是设置在航空GPS接收机中的一种算法，对卫星故障反应迅速及完全自动，且无需外界干预。但是，RAIM要求机载GPS接收机视界内有5颗以上几何分布较好的卫星，否则就无法进行完好性判定。这就导致部分地区在某些时间RAIM不能使用，即有RAIM覆盖空洞。当有GPS卫星失效时，这种现象就更加严重。</p>
+                                <p>地面增强完好性监视(GAIM)方法借助于地面监测站收集视界内所有卫星传来的信号，产生伪距测量值并计算出伪距误差，判断卫星的伪距误差是否在允许的范围内。如果超过一定的门限，就通知服务区内所有用户不得使用这颗卫星。对不同飞行阶段完好性有不同的门限限制。为了扩大监测范围和监视的可靠性，一般要由一些地面监测站组成网络。</p>
+                                <p>与RAIM相比，GAIM有其优势的方面。这主要是由于GAIM监测站的位置精确已知，以这些精确的位置作为基准，可以迅速判定视界内的卫星是否能够用于导航，因而不受视界内卫星的数量和卫星几何精度因子的影响。并且监测站可以使用无码双频接收机消除电离层延迟，因此可以确保精确监测视界内所有可见卫星的信号，从而确保可以迅速确定出信号超差的卫星。</p>
+                                <p>WAAS系统包括：基准站，主控站，地面地球站，静地轨道卫星。</p>
+                                <p>它们的功能和相互关系是：基准站有许多个，广泛分布于服务区域内，用于收集GPS及静地轨道卫星发来的信息并进行处理。主控站汇集来自各基准站的数据并进行处理，以确定每个被监测卫星的完好性、差分校正值、残差和电离层信息，并产生静地轨道卫星的导航参数。以上信息传到地面地球站，随同静地轨道卫星导航电文一起上行传给地球同步卫星。地球同步卫星上的转发器在L1频率上以与GPS卫星相同的调制方式下行传送这些数据。由此可见，WAAS是一个复杂的系统，它将在大的范围内（比如整个美国本土）同时提高GPS系统的导航精度（通过差分技术）、可用性（通过附加测距信号源）、完好性（即提供及时报警能力）及连续性。其最终目标是使GPS增强成一个能够用于所有飞行阶段直至Ｉ类精密进近的主用甚至唯一空中导航系统。</p>
+                                <p>WAAS系统不仅要监视GPS系统的完好性，而且要监视WAAS系统本身（包括由静地轨道卫星发射的信号）的完好性，监视的参数不是GPS卫星的伪距误差，而是经过WAAS修正后的伪距残差。因此WAAS的GPS完好性的监视机制与RAIM及GAIM均有很大的不同。</p>
+                                <p>表4.1对RAIM、GAIM和WAAS三种方法的完好性增强性能指标进行了比较。</p></td>
+                        </tr>
+                        <tr>
+                            <td><table width="100%"  border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#666666">
+                                <tr bgcolor="#FFFFFF">
+                                    <th height="25" rowspan="2" bgcolor="#DEDFCF"><div align="center">性能</div></th>
+                                    <th height="25" colspan="3" bgcolor="#DEDFCF"><div align="center">完好性增强方式</div></th>
+                                </tr>
+                                <tr>
+                                    <th height="25" bgcolor="#FFFBEA"><div align="center">RAIM</div></th>
+                                    <th height="25" bgcolor="#FFFBEA"><div align="center">GAIM</div></th>
+                                    <th height="25" bgcolor="#FFFBEA"><div align="center">WAAS</div></th>
+                                </tr>
+                                <tr bgcolor="#EBEBEB">
+                                    <td height="25"><div align="center">费用</div></td>
+                                    <td height="25"><div align="center">低</div></td>
+                                    <td height="25"><div align="center">低</div></td>
+                                    <td height="25"><div align="center">高</div></td>
+                                </tr>
+                                <tr bgcolor="#FFFFFF">
+                                    <td height="25"><div align="center">技术难度</div></td>
+                                    <td height="25"><div align="center">中</div></td>
+                                    <td height="25"><div align="center">中</div></td>
+                                    <td height="25"><div align="center">高</div></td>
+                                </tr>
+                                <tr bgcolor="#EBEBEB">
+                                    <td height="25"><div align="center">可用性</div></td>
+                                    <td height="25"><div align="center">0.9899</div></td>
+                                    <td height="25"><div align="center">&gt;0.99999</div></td>
+                                    <td height="25"><div align="center">&gt;0.99999</div></td>
+                                </tr>
+                                <tr bgcolor="#FFFFFF">
+                                    <td height="25"><div align="center">告警时间</div></td>
+                                    <td height="25"><div align="center">&lt;10秒<br></br>
+                                    </div></td>
+                                    <td height="25"><div align="center">&lt;10 秒</div></td>
+                                    <td height="25"><div align="center">&lt;10 秒</div></td>
+                                </tr>
+                                <tr bgcolor="#EBEBEB">
+                                    <td height="25"><div align="center">检测概率</div></td>
+                                    <td height="25"><div align="center">0.999</div></td>
+                                    <td height="25"><div align="center">1.0</div></td>
+                                    <td height="25"><div align="center">1.0</div></td>
+                                </tr>
+                                <tr bgcolor="#FFFFFF">
+                                    <td height="25"><div align="center">增强范围</div></td>
+                                    <td height="25"><div align="center">全球（但有空洞）</div></td>
+                                    <td height="25"><div align="center">服务区域 </div></td>
+                                    <td height="25"><div align="center">覆盖区域</div></td>
+                                </tr>
+                            </table></td>
+                        </tr>
+                        <tr>
+                            <td height="20"><div align="center" class="memo">表4.1 完好性增强方式性能比较仿真结果</div></td>
+                        </tr>
+                        <tr>
+                            <td><p>&nbsp;&nbsp;&nbsp;&nbsp;从表4.1的比较可以看出，WAAS和GAIM完好性增强指标十分接近，由于WAAS是一种同时提高完好性、定位精度和可用性的综合系统，因此费用和技术难度都很高。 </p>
+                                <p>RAIM和GAIM各有其优势，且有一定的互补性，比如增强范围，RAIM可用于全球，但在某些地区某些时段有RAIM空洞。而GAIM在服务区域内可弥补RAIM的空洞区域。另外在可用性和检测概率方面GAIM的性能比RAIM要强。</p></td>
+                        </tr>
+                        <tr>
+                            <td height="30"><div align="right"><img src="image/gotop.gif" width="15" height="15"/><a href="#" target="_self">返回顶部</a>&nbsp;&nbsp;</div></td>
+                        </tr>
+                    </table>
+                    <table width="95%"  border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td height="20"><a name="05"></a><span class="tit2">5、GPS卫星完好性增强技术在国外的发展概况</span></td>
+                        </tr>
+                        <tr>
+                            <td><p>&nbsp;&nbsp;&nbsp;&nbsp;美国在1993年以前主要研究方向是利用RAIM和GAIM增强GPS完好性。1993年在决定实施WAAS之后转向发展WAAS，以便在整个美国领土范围内提高GPS的完好性、精度和可用性，使之达到Ⅰ类精密进近的水平。</p>
+                                <p>美国在90年代决定发展WAAS的理由是，利用WAAS可以使GPS系统在整个美国范围内提高到主用航空导航系统甚至唯一航空导航系统的水平，因而有了WAAS便可以逐步淘汰陆基导航系统VOR/DME（在美国一共有1012部，包括VOR，VOVTAC台）和所有完成Ⅰ类精密进近与着陆的ILS地面台（联邦航空局819部，国防部165部），这样可以节省大量陆基系统的采购与维护费用，同时明显地提高美国本土的航空导航能力——飞机可以沿更直的航线飞行，从而节省成本与时间。另外，利用LAAS也可以提高GPS的精度与完好性。但由于美国机场数量很多，领土面积很大，如用LAAS来完成与WAAS相同的功能则费用太高。</p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;WAAS系统的第一期工程合同金额5.25亿美元。此后还有二期和三期工程，主要是在境外或海岛上增补广域基准站（以及相应的通信链路），以使WAAS系统能够覆盖美国的边境地区。同时还要增补静地轨道卫星，以提高WAAS的可用性。WAAS一二和三期工程一共约需投资10亿美元；以后20年内WAAS的维护运行费用还要20亿美元。WAAS系统于2003年达到初始运行能力。</p>
+                                <p>由于在最近几年GPS航空使用中陆续发生了多次GPS信号大范围受到干扰的事件，说明GPS是很容易受到干扰的，美国包括国会在内的一些机构对GPS能否作为唯一空中导航系统发生了怀疑，包括对WAAS能否作为唯一或主用导航系统发生了怀疑，这是因为WAAS并没提高GPS的抗干扰能力，亦即没有提高GPS的连续性。包括FAA正在考虑改造Loran C或VOR/DME，作为GPS的备份系统。这就引发了建立WAAS系统是否合适的问题。理由有二：WAAS系统费用太高，达不到取代陆基系统以节省开支的目的。而且，如果要用陆基系统作为GPS—WAAS的备份系统，则实质上是承认GPS—WAAS还不是主用系统。</p></td>
+                        </tr>
+                        <tr>
+                            <td><div align="center"><a href="image/waas002_large.jpg" target="_blank"><img src="image/waas002_large.jpg" alt="点击看大图" width="528" height="272" border="0"/></a></div></td>
+                        </tr>
+                        <tr>
+                            <td height="30"><div align="center" class="memo"><a href="image/waas002_large.jpg" target="_blank">图5-1 WAAS以及类似WAAS系统服务地区示意图（点击看大图）</a></div></td>
+                        </tr>
+                        <tr>
+                            <td><p>欧洲和日本正在分别发展EGNOS和MSAS，它们和WAAS的功能很类似，其目的是将GPS或GPS/GLONASS提高到Ⅰ类精密进近的能力。WAAS和类似WAAS系统的可能服务地区见图5-1.。 澳大利亚与美国和欧洲的发展思路不一样，他们认为澳大利亚周围是大洋，中部是荒漠，空中交通繁忙的地区集中在东南部，机场数量不多；另外，澳大利亚天气比较好，以目视飞行为主；特别对小型飞机而言数量比较多，需要依靠GPS作为主用导航系统，来解决其在终端区和非精密进场问题。因此，计划在全国每个机场建立GPS地基局域增强系统（GRAS），一方面完成飞机的非精密进近，同时提高交通密集地区GPS的完好性，使之上升为主用系统。为了在其余航行阶段（边远地区和越洋区）也使GPS提高为主用系统，他们打算在其境内设置一些基准站，用于获得视界内GPS卫星的差分和完好性信息。由于GRAS系统不要求达到CAT Ⅰ的能力，所需的基准站的数量将比美国的WAAS要少得多，且基准站也要简单。这样澳大利亚将建立覆盖其全国的GRAS系统使GPS提高到满足民用航空的要求，其中，地面系统预计总费用约为3,000万美元。据澳大利亚航空局专家介绍，目前有多个国家对GRAS系统比较感兴趣，俄罗斯希望建立自己的GRAS系统，在赤道附近的许多非洲国家以及南美的巴西、阿根廷、秘鲁等国家电离层散射比较严重，卫星信号比较弱，因而也希望建立GRAS系统，同时，印度希望将GRAS作为WAAS备用系统。 </p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;既然所有航空GPS接收机中都有了RAIM功能，为什么澳大利亚、美国、西欧和日本还要用GRAS或广域差分技术进一步提高GPS的完好性呢？这是因为RAIM至少视界内要有5颗以上的卫星且几何分布良好的条件下才能正常工作，而在一些地方一些时候这是做不到的，因此RAIM功能存在随时间而变化的覆盖空洞。在GPS系统有卫星发生故障时这个问题还要加重。美国FAA因为有了RAIM技术而批准GPS在越洋和边远区作航空主用系统，在本土航路、终端区和非精密进近时作辅助系统这是为了尽快使GPS在民用航空中使用起来，从中得到效益。</p>
+                                <p>&nbsp;&nbsp;&nbsp;为了减少RAIM覆盖空洞，现在GPS有27颗卫星在工作，但是这样的星座是还不能保证完全消除RAIM覆盖空洞。所以各国民航当局，包括FAA都要采取措施在RAIM之外，增强GPS的完好性。</p></td>
+                        </tr>
+                        <tr>
+                            <td height="30"><div align="right"><img src="image/gotop.gif" width="15" height="15"/><a href="#" target="_self">返回顶部</a>&nbsp;&nbsp;</div></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div th:replace="footer :: footer"></div>
+        </div>
+    </div>
+</form>
+</body>
+</html>

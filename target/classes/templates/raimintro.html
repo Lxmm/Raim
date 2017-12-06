@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head id="Head1"><title>
+    系统概述-民航GNSS导航卫星完好性监测系统
+</title>
+    <style type="text/css">
+        .tit2
+        {
+            font-weight: 700;
+            font-size: small;
+        }
+        .style2
+        {
+            font-weight: normal;
+            font-size: small;
+        }
+
+        .left_title
+        {
+            vertical-align:bottom;
+            text-align:center;
+            line-height:30px;
+        }
+
+
+    </style>
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <!--<link href="../bootstrap/css/bootstrap.css" rel="stylesheet" />-->
+    <script src="../js/menu.js" type="text/javascript"></script>
+    <script src="../js/main_nav.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/css.css" />
+    <!--<link rel="stylesheet" href="../css/layui.css"/>-->
+    <script src="../js/layui.js"></script>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var theForm = document.forms['form1'];
+        if (!theForm) {
+            theForm = document.form1;
+        }
+        function __doPostBack(eventTarget, eventArgument) {
+            if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                theForm.__EVENTTARGET.value = eventTarget;
+                theForm.__EVENTARGUMENT.value = eventArgument;
+                theForm.submit();
+            }
+        }
+        //]]>
+    </script>
+</head>
+<body>
+<form method="post" action="raimintro.html" id="form1">
+    <div class="aspNetHidden">
+        <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+        <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE2MDk5MjA0NjIPZBYCAgMPZBYCAgMPZBYMZg8PFgIeBFRleHQFGzIwMTflubQxMeaciDI05pelIOaYn+acn+S6lGRkAgEPDxYCHwAFEOiuv+mXruaAu+mHjzoyMzJkZAICDxYCHgdWaXNpYmxlaGQCAw8WAh8BaGQCBA8PFgQfAAUN6KGM5Lia55So5oi3Oh8BZ2RkAgUPDxYCHwAFBGduc3NkZGRNFy7CBuT0hnkDDcW/Dts54Eo0Pf6Jx++QCiPFiNgJZA==" />
+    </div>
+    <div class="aspNetHidden">
+        <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAwLuytyZDwKyuOrTDwL2iKyTBVunbt11mSnvAVHpwzTfWhTHlHvq5CE+YeOFdKE0anT4" />
+    </div>
+    <div class="zhong">
+        <div th:replace="header :: header"></div>
+        <div class="main">
+            <div th:replace="raimleftpanel :: raimleftpanel"></div>
+            <div class="right">
+                <div class="daohang">首页 > RAIM预测 > <span>RAIM预测简介</span></div>
+                <div class="right_title">RAIM预测简介
+                </div>
+                <div class="xiangqing">
+                    <div align="right">
+                        <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="border-style: none; border-color: inherit; border-width: medium; margin:auto; border-collapse:collapse; mso-border-alt:solid windowtext .5pt; mso-yfti-tbllook:480; mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:.5pt solid windowtext; mso-border-insidev:.5pt solid windowtext; width:510px;">
+                            <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes;height:17.0pt'>
+                                <td width="503" valign="top" style='width:377.6pt;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+                                    <p class="MsoNormal" align="center" style='text-align:center;line-height:150%'><span lang="utf-8" style='font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";color:black'>声明</span></p>
+                                    <p class="MsoNormal" style='margin-left:21.0pt;text-indent:-21.0pt;line-height:150%;mso-list:l0; text-align: left;'>
+                                    <span lang="EN-US" style='font-size:12.0pt;line-height:150%;font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings;color:black'><span style='mso-list:Ignore'>l</span></span>
+                                    <span lang="EN-US" style='font-size:12.0pt;line-height:150%;color:black'>RAIM</span><span style='font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";color:black'>系统的输入为FAA和US Coast Guard提供的NOTAM和NANU报文，不保证应用的报文与GPS卫星实际情况相一致。</span>
+                                    </p>
+                                    <p class="MsoNormal" style='margin-left:21.0pt;text-indent:-21.0pt;line-height:150%;mso-list:l0; text-align: left;'>
+                                        <span lang="EN-US" style='font-size:12.0pt;line-height:150%;font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings;color:black'><span style='mso-list:Ignore'>l</span></span>
+                                        <span lang="EN-US" style='font-size:12.0pt;line-height:150%;color:black'>RAIM</span><span style='font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";color:black'>RAIM预测可能受到卫星的突发故障、电离层剧烈变化等多种不可预见因素的影响，这些因素无法及时反应到RAIM预测系统的输入，将可能导致预测结果与实际不符，系统不承担由此造成后果的法律责任。</span>
+                                    </p>
+                                    <p class="MsoNormal" style='margin-left:21.0pt;text-indent:-21.0pt;line-height:150%;mso-list:l0; text-align: left;'>
+                                        <span lang="EN-US" style='font-size:12.0pt;line-height:150%;font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings;color:black'><span style='mso-list:Ignore'>l</span></span>
+                                        <span lang="EN-US" style='font-size:12.0pt;line-height:150%;color:black'>RAIM</span><span style='font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";color:black'>当使用该RAIM系统辅助航班放行时，应取得满足AC-91FS-01或AC-91-08的使用许可。</span>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br/>
+                    <p class="raimintro">
+                        <span class="raimintro1" lang="EN-US">
+                            RAIM预测服务是在制定飞行计划时提供机载接收机RAIM可用性的预测，为飞行签派部门和管制部门提供航路、终端区和非精密进近阶段的RAIM可用性信息，为制定飞行计划提供必要的依据。
+                        </span>
+                    </p>
+                    <br/>
+                    <p class="raimintro">
+                        <span class="raimintro1" lang="EN-US">
+                            RAIM预测是基于RAIM技术的，RAIM技术是设在GPS接收机中的一种算法，它利用GPS卫星的冗余信息，对GPS的多个导航解进行一致性检验，从而达到完好性监测的目的。按照GPS 24颗卫星的星座布局，将为世界提供99.99%以上5颗GPS卫星的覆盖。当机载GPS接收机视界内有5颗卫星时，由于最少只需要4颗便能产生飞机的定位信息，那么可以用这5颗卫星构成5个组合，每个组合包括4颗卫星，并分别求出相应的位置解。如果没有卫星信号异常，且卫星几何因子较好，那么这5个位置解会在一定的范围内保持一致。反之，如果其中一颗卫星信号异常，那么这5个位置之间的差异就会很大。这样，利用RAIM就可迅速判定有无卫星信号异常。当有6颗可见星时，用RAIM就可判断出是哪一颗卫星信号异常，从而提高了GPS系统的完好性。RAIM一方面保证了定位精度，另一方面实现了对卫星工作状态的监测，是目前卫星定位中自主有效地获得完好性监测的唯一方法。RAIM的优点是对卫星故障反应迅速及完全自动，且无需外界干预。
+                        </span>
+                    </p>
+                    <br/>
+                    <p class="raimintro">
+                        <span class="raimintro1" lang="EN-US">
+                            机载接收机中RAIM算法用于指示导航解是否可以使用，从5颗或更多可见卫星中选择4颗进行计算可以得到导航解，如果该导航解落在预定的误差范围内，则认为该导航解可用，如果超过一定误差范围，则给出RAIM告警，这意味着此时接收机的精确位置是无法保证的，所以建议此时不要使用GPS用于导航，直到告警解除后再使用。
+                        </span>
+                    </p>
+                    <br/>
+                    <p class="raimintro">
+                        <span class="raimintro1" lang="EN-US">
+                            RAIM的可用性依赖于接收机可见或可用的卫星数，如果可见卫星数少于5颗，则认为存在“RAIM空洞”，同时，RAIM可用性是接收机视界内GPS卫星几何分布的函数。另外，美国国防部可能对一些卫星进行“维修”而使其暂时不可用，美国国防部将在NOTAMS和NANU（Notice Advisories to Navstar Users）报文中提前通知这样的GPS卫星的维护计划。所以，RAIM预测在执行过程中同时考虑了卫星的几何分布和卫星的维护计划，这样可以提高预测的准确性。
+                        </span>
+                    </p>
+                    <br/>
+                </div>
+            </div>
+            <div th:replace="footer :: footer"></div>
+        </div>
+    </div>
+</form>
+</body>
+</html>
