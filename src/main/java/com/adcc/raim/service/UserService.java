@@ -18,4 +18,8 @@ public class UserService {
     public List<User> queryAllUserInfo(){
         return userDAO.queryAllUserInfo();
     }
+
+    public User findByUserNameAndPassword(String username,String password){
+        return userDAO.findByUserNameAndPassword(username,password);
+    }
 }

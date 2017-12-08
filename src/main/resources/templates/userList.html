@@ -1,13 +1,11 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>hello</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<!--@thymesVar id="userName" type="java.lang.String"-->
-<!--<p th:text="'Hello！, ' + ${userName} + '!'" >3333</p>-->
-
+<p th:text="${session.username}"></p>
 <table>
     <tr>
         <th>用户名</th>
@@ -15,10 +13,11 @@
     </tr>
     <!--@thymesVar id="userList" type="java.util.List"-->
     <tr th:each="user : ${userList}">
+        <!--@thymesVar id="username" type="-->
         <!--@thymesVar id="username" type="java.lang.String"-->
-        <td th:text="${user.username}"></td>
+        <td th:utext="${user.username}"></td>
         <!--@thymesVar id="username" type="java.lang.String"-->
-        <td th:text="${user.password}"></td>
+        <td th:utext="${user.password}"></td>
     </tr>
 </table>
 

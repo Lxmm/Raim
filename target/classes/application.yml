@@ -5,7 +5,7 @@ spring.http.encoding.enabled: true
 server.tomcat.uri-encoding: UTF-8
 #解决没有跳转到html网页的问题
 #前缀设置，SpringBoot默认模板放置在classpath:/template/目录下
-#spring.mvc.view.prefix: /public/view/
+#spring.mvc.view.prefix: /templates/
 # 后缀设置，默认为.html
 #spring.mvc.view.suffix: .html
 
@@ -33,7 +33,7 @@ spring.datasource.initial-size: 10  #指定启动连接池时，初始建立的�
 
 #thymeleaf模板属性设置
 #thymeleaf start
-spring.thymeleaf.mode: HTML5
+spring.thymeleaf.mode: LEGACYHTML5
 spring.thymeleaf.encoding: UTF-8
 spring.thymeleaf.content-type: text/html
 #开发时关闭缓存,不然没法看到实时页面

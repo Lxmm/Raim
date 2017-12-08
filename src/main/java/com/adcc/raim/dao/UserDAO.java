@@ -2,6 +2,7 @@ package com.adcc.raim.dao;
 
 import com.adcc.raim.entity.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,4 +14,6 @@ import java.util.List;
 @Mapper
 public interface UserDAO {
     List<User> queryAllUserInfo();
+
+    User findByUserNameAndPassword(@Param("username")String username,@Param("password")String password);
 }
