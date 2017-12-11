@@ -33,16 +33,16 @@ public class UserController {
     //首页
     @RequestMapping(value = "/index")
     public String index(Model model,HttpSession session){
-        String username = (String) session.getAttribute("username");
-        model.addAttribute("username",username);
+        String loginname = (String) session.getAttribute("loginname");
+        model.addAttribute("loginname",loginname);
          return "index";
     }
 
     //简介
     @RequestMapping(value = "/introduction")
     public String introduction(HttpSession session, Model model){
-        String username = (String) session.getAttribute("username");
-        model.addAttribute("username",username);
+        String loginname = (String) session.getAttribute("loginname");
+        model.addAttribute("loginname",loginname);
         return "introduction";
     }
 
@@ -50,8 +50,8 @@ public class UserController {
     //预测
     @RequestMapping(value = "/raimintro")
     public String raimintro(HttpSession session, Model model){
-        String username = (String) session.getAttribute("username");
-        model.addAttribute("username",username);
+        String loginname = (String) session.getAttribute("loginname");
+        model.addAttribute("loginname",loginname);
         return "raimintro";
     }
 
@@ -59,8 +59,8 @@ public class UserController {
     //关于我们
     @RequestMapping(value = "/about")
     public String about(HttpSession session, Model model){
-        String username = (String) session.getAttribute("username");
-        model.addAttribute("username",username);
+        String loginname = (String) session.getAttribute("loginname");
+        model.addAttribute("loginname",loginname);
         return "about";
     }
 
@@ -68,8 +68,8 @@ public class UserController {
     //首页—系统公告
     @RequestMapping(value = "/systemnoticeList")
     public String systemnoticeList(HttpSession session, Model model){
-        String username = (String) session.getAttribute("username");
-        model.addAttribute("username",username);
+        String loginname = (String) session.getAttribute("loginname");
+        model.addAttribute("loginname",loginname);
         return "systemnoticeList";
     }
 
@@ -77,8 +77,8 @@ public class UserController {
     //首页—系统公告
     @RequestMapping(value = "/service")
     public String service(HttpSession session, Model model){
-        String username = (String) session.getAttribute("username");
-        model.addAttribute("username",username);
+        String loginname = (String) session.getAttribute("loginname");
+        model.addAttribute("loginname",loginname);
         return "service";
     }
 
@@ -86,8 +86,8 @@ public class UserController {
     //首页—版本声明
     @RequestMapping(value = "/copyright")
     public String copyright(HttpSession session, Model model){
-        String username = (String) session.getAttribute("username");
-        model.addAttribute("username",username);
+        String loginname = (String) session.getAttribute("loginname");
+        model.addAttribute("loginname",loginname);
         return "copyright";
     }
 
@@ -95,8 +95,8 @@ public class UserController {
     //首页—联系我们
     @RequestMapping(value = "/contact")
     public String contact(HttpSession session, Model model){
-        String username = (String) session.getAttribute("username");
-        model.addAttribute("username",username);
+        String loginname = (String) session.getAttribute("loginname");
+        model.addAttribute("loginname",loginname);
         return "contact";
     }
 
@@ -104,16 +104,16 @@ public class UserController {
     //关于我们—用户留言
     @RequestMapping(value = "/guest")
     public String guest(HttpSession session, Model model){
-        String username = (String) session.getAttribute("username");
-        model.addAttribute("username",username);
+        String loginname = (String) session.getAttribute("loginname");
+        model.addAttribute("loginname",loginname);
         return "guest";
     }
 
     //简介—系统结构
     @RequestMapping(value = "/structure")
     public String structure(HttpSession session, Model model){
-        String username = (String) session.getAttribute("username");
-        model.addAttribute("username",username);
+        String loginname = (String) session.getAttribute("loginname");
+        model.addAttribute("loginname",loginname);
         return "structure";
     }
 
@@ -121,8 +121,8 @@ public class UserController {
     //RAIM预测—GPS卫星状态
     @RequestMapping(value = "/gpsstate")
     public String gpsstate(HttpSession session, Model model){
-        String username = (String) session.getAttribute("username");
-        model.addAttribute("username",username);
+        String loginname = (String) session.getAttribute("loginname");
+        model.addAttribute("loginname",loginname);
         return "gpsstate";
     }
 
@@ -130,8 +130,8 @@ public class UserController {
     //RAIM预测—机场预测
     @RequestMapping(value = "/airPort")
     public String airPort(HttpSession session, Model model){
-        String username = (String) session.getAttribute("username");
-        model.addAttribute("username",username);
+        String loginname = (String) session.getAttribute("loginname");
+        model.addAttribute("loginname",loginname);
         return "airPort";
     }
 
@@ -139,8 +139,8 @@ public class UserController {
     //RAIM预测—终端区预测
     @RequestMapping(value = "/npa")
     public String npa(HttpSession session, Model model){
-        String username = (String) session.getAttribute("username");
-        model.addAttribute("username",username);
+        String loginname = (String) session.getAttribute("loginname");
+        model.addAttribute("loginname",loginname);
         return "npa";
     }
 
@@ -148,8 +148,8 @@ public class UserController {
     //RAIM预测—航线预测
     @RequestMapping(value = "/fairwayForecast")
     public String fairwayForecast(HttpSession session, Model model){
-        String username = (String) session.getAttribute("username");
-        model.addAttribute("username",username);
+        String loginname = (String) session.getAttribute("loginname");
+        model.addAttribute("loginname",loginname);
         return "fairwayForecast";
     }
 
@@ -157,8 +157,8 @@ public class UserController {
     //RAIM预测—区域预测
     @RequestMapping(value = "/areaForecast")
     public String areaForecast(HttpSession session, Model model){
-        String username = (String) session.getAttribute("username");
-        model.addAttribute("username",username);
+        String loginname = (String) session.getAttribute("loginname");
+        model.addAttribute("loginname",loginname);
         return "areaForecast";
     }
 
@@ -166,16 +166,16 @@ public class UserController {
     //RAIM预测—关于
     @RequestMapping(value = "/announce")
     public String announce(HttpSession session, Model model){
-        String username = (String) session.getAttribute("username");
-        model.addAttribute("username",username);
+        String loginname = (String) session.getAttribute("loginname");
+        model.addAttribute("loginname",loginname);
         return "announce";
     }
 
     //关于我们-用户留言—添加留言
     @RequestMapping(value = "/guestAdd")
     public String guestAdd(HttpSession session, Model model){
-        String username = (String) session.getAttribute("username");
-        model.addAttribute("username",username);
+        String loginname = (String) session.getAttribute("loginname");
+        model.addAttribute("loginname",loginname);
         return "guestAdd";
     }
 
@@ -183,16 +183,16 @@ public class UserController {
     //登录
     @RequestMapping(value = "/userLogin")
     public String userLogin(HttpSession session, Model model){
-        String username = (String) session.getAttribute("username");
-        model.addAttribute("username",username);
+        String loginname = (String) session.getAttribute("loginname");
+        model.addAttribute("loginname",loginname);
         return "userLogin";
     }
 
     //注册
     @RequestMapping(value = "/userRegister")
     public String userRegister(HttpSession session, Model model){
-        String username = (String) session.getAttribute("username");
-        model.addAttribute("username",username);
+        String loginname = (String) session.getAttribute("loginname");
+        model.addAttribute("loginname",loginname);
         return "userRegister";
     }
 
@@ -209,8 +209,8 @@ public class UserController {
 //        String userName =userList.get(0).getUsername();
 //        model.addAttribute("userName",userName);
         model.addAttribute("userList",userList);
-        String username = userList.get(0).getUsername();
-         session.setAttribute("username",username);
+        String loginname = userList.get(0).getUsername();
+         session.setAttribute("loginname",loginname);
         return "userList";
     }
 
@@ -222,20 +222,19 @@ public class UserController {
      */
     @ResponseBody
     @RequestMapping(value = "/findByUserNameAndPassword", method = RequestMethod.POST)
-    public Map<String, Object> findByUserNameAndPassword(String username,String password,HttpSession session,Model model) {
+    public Map<String, Object> findByUserNameAndPassword(String loginname,String password,HttpSession session,Model model) {
         Map<String, Object> result = new HashMap<>();
         try {
             //password = UserUtil.MD5(password);
-            User user = userService.findByUserNameAndPassword(username,password);
 
-            System.out.println(user.getUsername());
+            User user = userService.findByUserNameAndPassword(loginname,password);
 
             if (user == null) {
                 result.put("msg", "账户不存在！");
                 return result;
             }
 
-            if(!user.getUsername().equals(username)){
+            if(!user.getLoginname().equals(loginname)){
                 result.put("msg", "用户名不正确！");
                 return result;
             }
@@ -245,8 +244,8 @@ public class UserController {
                 return result;
             }
             result.put("msg", "可以登录");
-            model.addAttribute("username",username);
-            session.setAttribute("username", username);
+            model.addAttribute("loginname",loginname);
+            session.setAttribute("loginname", loginname);
             return result;
         }catch (Exception e){
             logger.error(e.getStackTrace());
@@ -264,10 +263,10 @@ public class UserController {
      */
     @ResponseBody
     @RequestMapping(value = "/loginOut", method = RequestMethod.POST)
-    public Map<String, Object> index2(HttpSession session,Model model) {
+    public Map<String, Object> loginOut(HttpSession session,Model model) {
         Map<String, Object> result = new HashMap<>();
         try {
-            session.removeAttribute("username");
+            session.removeAttribute("loginname");
             result.put("msg", "succ");
             return result;
         }catch (Exception e){

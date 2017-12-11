@@ -4,16 +4,12 @@
 
 <mapper namespace="com.adcc.raim.dao.UserDAO">
     <select id="queryAllUserInfo" parameterType="java.util.Map" resultType="com.adcc.raim.entity.User">
-        SELECT * FROM r_user ORDER BY username ASC
+        SELECT * FROM r_user ORDER BY loginname ASC
     </select>
 
 
     <select id="findByUserNameAndPassword" parameterType="java.lang.String" resultType="com.adcc.raim.entity.User">
-         SELECT * FROM r_user AS  u WHERE u.username = #{username} and u.password = #{password}
-    </select>
-
-    <select id="queryUserByName" parameterType="java.lang.String" resultType="com.adcc.raim.entity.User">
-        SELECT * FROM r_user WHERE username = #{username}
+         SELECT * FROM r_user AS  u WHERE u.loginname = #{loginname} and u.password = #{password}
     </select>
 
 

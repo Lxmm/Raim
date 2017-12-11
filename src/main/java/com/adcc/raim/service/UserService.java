@@ -19,13 +19,10 @@ public class UserService {
         return userDAO.queryAllUserInfo();
     }
 
-    public User findByUserNameAndPassword(String username,String password){
-        return userDAO.findByUserNameAndPassword(username,password);
+    public User findByUserNameAndPassword(String loginname,String password){
+        return userDAO.findByUserNameAndPassword(loginname,password);
     }
 
-    public User queryUserByName(String username){
-        return userDAO.queryUserByName(username);
-    }
 
 
 }

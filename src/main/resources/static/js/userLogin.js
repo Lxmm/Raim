@@ -1,9 +1,9 @@
 function userLogin() {
 
-    var username = $("#username").val();
+    var loginname = $("#username").val();
     var password = $("#password").val();
 
-    if (username == "") {
+    if (loginname == "") {
         alert("用户名不能为空！");
         return;
     }
@@ -16,7 +16,7 @@ function userLogin() {
         url: "/findByUserNameAndPassword",
         type: "post",
         async: false,
-        data: {"username": username, "password": password},
+        data: {"loginname": loginname, "password": password},
         dataType: "json",
         success: function (data) {
             var msg = data.msg;
