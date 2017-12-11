@@ -232,3 +232,15 @@ a{  text-decoration:none;}
     color:black;
     mso-font-kerning:0pt;
 }
+
+.bCount
+{
+    margin-top:0px;
+    font-weight: bold;
+    height:20px;
+    width:100px;
+    float:left;
+    color:#0033CC;
+    font-size: small;
+    text-align: left;
+}

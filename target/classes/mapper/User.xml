@@ -12,5 +12,9 @@
          SELECT * FROM r_user AS  u WHERE u.username = #{username} and u.password = #{password}
     </select>
 
+    <select id="queryUserByName" parameterType="java.lang.String" resultType="com.adcc.raim.entity.User">
+        SELECT * FROM r_user WHERE username = #{username}
+    </select>
+
 
 </mapper>

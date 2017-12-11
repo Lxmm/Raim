@@ -16,4 +16,6 @@ public interface UserDAO {
     List<User> queryAllUserInfo();
 
     User findByUserNameAndPassword(@Param("username")String username,@Param("password")String password);
+
+    User queryUserByName(@Param("username")String username);
 }

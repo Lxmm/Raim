@@ -22,4 +22,10 @@ public class UserService {
     public User findByUserNameAndPassword(String username,String password){
         return userDAO.findByUserNameAndPassword(username,password);
     }
+
+    public User queryUserByName(String username){
+        return userDAO.queryUserByName(username);
+    }
+
+
 }

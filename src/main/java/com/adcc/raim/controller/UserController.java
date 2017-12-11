@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -207,7 +206,6 @@ public class UserController {
     @RequestMapping(value = "/queryAllUserInfo")
     public String queryAllUserInfo(HttpServletRequest request, Model model,HttpSession session){
         List<User> userList = userService.queryAllUserInfo();
-
 //        String userName =userList.get(0).getUsername();
 //        model.addAttribute("userName",userName);
         model.addAttribute("userList",userList);
@@ -215,45 +213,6 @@ public class UserController {
          session.setAttribute("username",username);
         return "userList";
     }
-
-    /**
-     * 根据用户名密码查询
-     * @return
-     */
-//    @ResponseBody
-//    @RequestMapping(value = "/findByUserNameAndPassword", method = RequestMethod.POST)
-//    public Map<String, Object> findByUserNameAndPassword(String username,String password,HttpSession session,Model model) {
-//        Map<String, Object> result = new HashMap<>();
-//        try {
-//            //password = UserUtil.MD5(password);
-//            User user = userService.findByUserNameAndPassword(username,password);
-//
-//            System.out.println(user.getUsername());
-//
-//            if (user == null) {
-//                result.put("msg", "账户不存在！");
-//                return result;
-//            }
-//            if (!user.getPassword().equals(password)) {
-//                result.put("msg", "密码不正确！");
-//                return result;
-//            }
-//            result.put("msg", "可以登录");
-//            model.addAttribute("username",username);
-//            session.setAttribute("username", username);
-//            return result;
-//        }catch (Exception e){
-//            logger.error(e.getStackTrace());
-//            result.clear();
-//            result.put("msg", "修改失败!");
-//        }
-//        return result;
-//
-//    }
-
-
-
-
 
 
 
@@ -275,6 +234,12 @@ public class UserController {
                 result.put("msg", "账户不存在！");
                 return result;
             }
+
+            if(!user.getUsername().equals(username)){
+                result.put("msg", "用户名不正确！");
+                return result;
+            }
+
             if (!user.getPassword().equals(password)) {
                 result.put("msg", "密码不正确！");
                 return result;
@@ -293,18 +258,17 @@ public class UserController {
     }
 
 
-
     /**
      * 注销
      * @return
      */
     @ResponseBody
     @RequestMapping(value = "/loginOut", method = RequestMethod.POST)
-    public Map<String, Object> index2(HttpSession session,Model model,String loginname) {
+    public Map<String, Object> index2(HttpSession session,Model model) {
         Map<String, Object> result = new HashMap<>();
         try {
+            session.removeAttribute("username");
             result.put("msg", "succ");
-            userLogout(loginname);
             return result;
         }catch (Exception e){
             logger.error(e.getStackTrace());
@@ -315,27 +279,7 @@ public class UserController {
     }
 
 
-    /**
-     * 每一个用户存放一个session。便于各种操作！！！(解决用户重复登录的问题)
-     */
-    public static Map<String, HttpSession> mapSession = new HashMap<String,HttpSession>();
-    public static void userLogout(String username){
-        if(mapSession.get(username)!=null){
-            //得到需要退出的用户的session
-            HttpSession session = mapSession.get(username);
-            //在map<username,session>中移除该用户，记住想要退出该用户，必须将该session废除或是remove掉user
-            mapSession.remove(username);
-            //得到session的所属性合集
-            Enumeration e = session.getAttributeNames();
-            //删除所有属性
-            while(e.hasMoreElements()){
-                String sessionName = (String) e.nextElement();
-                session.removeAttribute(sessionName);
-            }
-            //废除该session
-            session.invalidate();
-        }
-    }
+
 
 
 
