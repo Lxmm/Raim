@@ -1,6 +1,7 @@
 package com.adcc.raim.controller;
 
 import com.adcc.raim.Tools.LoadYML;
+import com.adcc.raim.Tools.UserUtil;
 import com.adcc.raim.entity.User;
 import com.adcc.raim.service.UserService;
 import org.apache.log4j.Logger;
@@ -13,9 +14,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 /**
  * Created by i on 2017/10/13.
@@ -210,7 +210,7 @@ public class UserController {
 //        model.addAttribute("userName",userName);
         model.addAttribute("userList",userList);
         String loginname = userList.get(0).getUsername();
-         session.setAttribute("loginname",loginname);
+        session.setAttribute("loginname",loginname);
         return "userList";
     }
 
@@ -225,30 +225,28 @@ public class UserController {
     public Map<String, Object> findByUserNameAndPassword(String loginname,String password,HttpSession session,Model model) {
         Map<String, Object> result = new HashMap<>();
         try {
-            //password = UserUtil.MD5(password);
-
+            password = UserUtil.MD5(password);
             User user = userService.findByUserNameAndPassword(loginname,password);
 
-            if (user == null) {
+            if (user == null || user.equals("")) {
                 result.put("msg", "账户不存在！");
                 return result;
+            }else {
+                //审批结果(-1：审批中,0：未通过审批,1：通过审批)
+                if(user.getAuditresult()==-1){
+                    result.put("msg", "只有通过审批的行业用户可以登录！");
+                }else if(user.getAuditresult()==0){
+                    result.put("msg", "只有通过审批的行业用户可以登录！");
+                }else {
+                    //user.getAuditresult()==1通过审核的成功跳转到页面
+                    result.put("msg", "succ");
+                    model.addAttribute("loginname",loginname);
+                    session.setAttribute("loginname", loginname);
+                }
             }
-
-            if(!user.getLoginname().equals(loginname)){
-                result.put("msg", "用户名不正确！");
-                return result;
-            }
-
-            if (!user.getPassword().equals(password)) {
-                result.put("msg", "密码不正确！");
-                return result;
-            }
-            result.put("msg", "可以登录");
-            model.addAttribute("loginname",loginname);
-            session.setAttribute("loginname", loginname);
             return result;
         }catch (Exception e){
-            logger.error(e.getStackTrace());
+            logger.error(e.getMessage());
             result.clear();
             result.put("msg", "修改失败!");
         }
@@ -279,6 +277,191 @@ public class UserController {
 
 
 
+    /**
+     * 根据用户名查询
+     * @return
+     */
+    @RequestMapping(value = "/findByName")
+    public String findByName(HttpSession session,Model model) {
+        try {
+            String loginname = (String) session.getAttribute("loginname");
+            User user = userService.findByName(loginname);
+            String username = user.getUsername();
+            String company = user.getCompany();
+            String job =user.getJob();
+            String telephone = user.getTelephone();
+            String mobile = user.getMobile();
+            String address = user.getAddress();
+            String zip = user.getZip();
+            String mail = user.getMail();
+            //获取时间，并转换为String类型
+            Date regdatetime = user.getRegdate();
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
+            String regdate = sdf.format(regdatetime);
+            //用户类型(-1：管理员,0：注册用户,1：行业用户,2：webservice用户)
+            int usertypeone = user.getUsertype();
+            String usertype ="";
+            if(usertypeone==-1){
+                usertype="管理员";
+            }else if (usertypeone==0){
+                usertype="注册用户";
+            }else if (usertypeone==1){
+                usertype="行业用户";
+            }else if (usertypeone==2){
+                usertype="webservice用户";
+            }
+            //审批结果(-1：审批中,0：未通过审批,1：通过审批)
+            int auditresultone = user.getAuditresult();
+            String auditresult = "";
+            if(auditresultone==-1){
+                auditresult="审批中";
+            }else if (auditresultone==0){
+                auditresult="未通过审批";
+            }else if (auditresultone==1){
+                auditresult="通过审批";
+            }
+
+            model.addAttribute("loginname",loginname);
+            model.addAttribute("username",username);
+            model.addAttribute("company",company);
+            model.addAttribute("job",job);
+            model.addAttribute("telephone",telephone);
+            model.addAttribute("mobile",mobile);
+            model.addAttribute("address",address);
+            model.addAttribute("zip",zip);
+            model.addAttribute("mail",mail);
+            model.addAttribute("regdate",regdate);
+            model.addAttribute("usertype",usertype);
+            model.addAttribute("auditresult",auditresult);
+            return "userLoginSuccess";
+        }catch (Exception e){
+            logger.error(e.getMessage());
+            return "error";
+        }
+
+    }
+
+
+
+    /**
+     * 根据用户名查询
+     * @return
+     */
+    @RequestMapping(value = "/userUpdate")
+    public String userUpdate(HttpSession session,Model model) {
+        try {
+            String loginname = (String) session.getAttribute("loginname");
+            User user = userService.findByName(loginname);
+            String username = user.getUsername();
+            String company = user.getCompany();
+            String job =user.getJob();
+            String telephone = user.getTelephone();
+            String mobile = user.getMobile();
+            String address = user.getAddress();
+            String zip = user.getZip();
+            String mail = user.getMail();
+
+            model.addAttribute("loginname",loginname);
+            model.addAttribute("username",username);
+            model.addAttribute("company",company);
+            model.addAttribute("job",job);
+            model.addAttribute("telephone",telephone);
+            model.addAttribute("mobile",mobile);
+            model.addAttribute("address",address);
+            model.addAttribute("zip",zip);
+            model.addAttribute("mail",mail);
+
+            return "userUpdate";
+        }catch (Exception e){
+            logger.error(e.getMessage());
+            return "error";
+        }
+
+    }
+
+
+
+    /**
+     * 修改
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/userUpdateCommit", method = RequestMethod.POST)
+    public Map<String, Object> userUpdateCommit(HttpSession session,Model model,String username,String company,String job,String telephone,String mobile,String address,String zip,String mail) {
+        Map<String, Object> result = new HashMap<>();
+        try {
+            String loginname = (String) session.getAttribute("loginname");
+            int result1 = userService.userUpdate(username,company,job,telephone,mobile,address,zip,mail,loginname);
+            if(result1>0){
+                result.put("msg", "succ");
+            }else {
+                result.put("msg", "err");
+            }
+            return result;
+        }catch (Exception e){
+            logger.error(e.getMessage());
+            result.put("msg", "err");
+            return result;
+        }
+
+    }
+
+
+
+    /**
+     * 根据用户名查询
+     * @return
+     */
+    @RequestMapping(value = "/updatePass")
+    public String updatePass(HttpSession session,Model model) {
+        try {
+            String loginname = (String) session.getAttribute("loginname");
+            model.addAttribute("loginname",loginname);
+            return "userPassUpdate";
+        }catch (Exception e){
+            logger.error(e.getMessage());
+            return "error";
+        }
+
+    }
+
+
+    /**
+     * 修改密码
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/userPassUpdate", method = RequestMethod.POST)
+    public Map<String, Object> userPassUpdate(HttpSession session,Model model,String tbOldPass,String tbNewPass,String tbNewPass2) {
+        Map<String, Object> result = new HashMap<>();
+        try {
+            tbOldPass = UserUtil.MD5(tbOldPass);
+            String loginname = (String) session.getAttribute("loginname");
+            User user= userService.findByName(loginname);
+            if(user.getPassword().equals(tbOldPass)){
+                if(tbNewPass.equals(tbNewPass2)){
+                    tbNewPass = UserUtil.MD5(tbNewPass);
+                    int result1 = userService.userPassUpdate(tbNewPass,loginname);
+                    if(result1>0){
+                        result.put("msg", "succ");
+                    }else {
+                        result.put("msg", "修改失败！");
+                    }
+                }else {
+                    result.put("msg", "两次输入的新密码不一致,请重新输入！");
+                }
+            }else {
+                result.put("msg", "旧密码不正确，请重新输入！");
+            }
+            return result;
+        }catch (Exception e){
+            logger.error(e.getMessage());
+            result.put("msg", "err");
+            return result;
+        }
+
+    }
 
 
 

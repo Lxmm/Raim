@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.adcc.raim.dao.UserDAO">
+    <select id="queryAllUserInfo" parameterType="java.util.Map" resultType="com.adcc.raim.entity.User">
+        SELECT * FROM r_user ORDER BY loginname ASC
+    </select>
+
+
+    <select id="findByUserNameAndPassword" parameterType="java.lang.String" resultType="com.adcc.raim.entity.User">
+         SELECT * FROM r_user AS  u WHERE u.loginname = #{loginname} and u.password = #{password}
+    </select>
+
+    <select id="findByName" parameterType="java.lang.String" resultType="com.adcc.raim.entity.User">
+        SELECT * FROM r_user AS  u WHERE u.loginname = #{loginname}
+    </select>
+
+    <update id="userUpdate" parameterType="java.util.Map">
+        update r_user
+        <set>
+            <if test="username != null and username != ''">
+                username = #{username,jdbcType=VARCHAR},
+            </if>
+            <if test="company != null and company != ''">
+                company = #{company,jdbcType=VARCHAR},
+            </if>
+            <if test="job != null and job != ''">
+                job = #{job,jdbcType=VARCHAR},
+            </if>
+            <if test="telephone != null and telephone != ''">
+                telephone = #{telephone,jdbcType=VARCHAR},
+            </if>
+            <if test="mobile != null and mobile != ''">
+                mobile = #{mobile,jdbcType=VARCHAR},
+            </if>
+            <if test="address != null and address != ''">
+                address = #{address,jdbcType=VARCHAR},
+            </if>
+            <if test="zip != null and zip != ''">
+                zip = #{zip,jdbcType=VARCHAR},
+            </if>
+            <if test="mail != null and mail != ''">
+                mail = #{mail,jdbcType=VARCHAR},
+            </if>
+
+        </set>
+        where loginname = #{loginname,jdbcType=VARCHAR}
+    </update>
+
+    <update id="userPassUpdate" parameterType="java.util.Map">
+        update r_user
+        <set>
+            <if test="tbNewPass != null and tbNewPass != ''">
+                password = #{tbNewPass,jdbcType=VARCHAR}
+            </if>
+        </set>
+        where loginname = #{loginname,jdbcType=VARCHAR}
+    </update>
+
+</mapper>

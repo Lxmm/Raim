@@ -11,7 +11,7 @@ $(function(){
         //$("#loginRegister").append(loginname);
         //$("#loginRegister").append("/></a> &nbsp;&nbsp; <a id='weMenu1_lbRegedit' href=''>注销</a>");
 
-        $("#loginRegister").append("<a id='weMenu1_lbuserName' href='#'>"+ loginname + "</a> &nbsp;&nbsp; <a id='weMenu1_lbRegedit' href=''>注销</a>");
+        $("#loginRegister").append("<a id='weMenu1_lbuserName' href='/findByName'>"+ loginname + "</a> &nbsp;&nbsp; <a id='weMenu1_lbRegedit' href=''>注销</a>");
 
     }
 

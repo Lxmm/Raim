@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.adcc.raim.dao.ContactDAO">
+    <select id="queryAllContact" parameterType="java.util.Map" resultType="com.adcc.raim.entity.Contact">
+        SELECT * FROM r_contact ORDER BY corpname ASC
+    </select>
+
+
+</mapper>

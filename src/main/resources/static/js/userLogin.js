@@ -1,14 +1,16 @@
 function userLogin() {
 
-    var loginname = $("#username").val();
-    var password = $("#password").val();
+    var loginname = $("#username").val().trim();
+    var password = $("#password").val().trim();
 
     if (loginname == "") {
-        alert("用户名不能为空！");
+        $("#lberrorinfos").empty();
+        $("#lberrorinfos").append("用户名不能为空！");
         return;
     }
     if (password == "") {
-        alert("密码不能为空！");
+        $("#lberrorinfos").empty();
+        $("#lberrorinfos").append("密码不能为空！");
         return;
     }
 
@@ -20,10 +22,12 @@ function userLogin() {
         dataType: "json",
         success: function (data) {
             var msg = data.msg;
-            if (msg == "可以登录") {
+            if (msg == "succ") {
                 window.location.href = "/index";
             }else {
-                alert(msg);
+                $("#lberrorinfos").empty();
+                $("#lberrorinfos").append(msg);
+                return;
             }
         },
         error: function () {

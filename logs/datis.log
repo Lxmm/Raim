@@ -1,99 +1,106 @@
-2017-12-11 08:23:59 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 08:26:08 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 08:32:41 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 08:33:23 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 08:35:14 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 08:35:20 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 08:38:00 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 08:46:22 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 08:47:29 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 08:49:06 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 08:50:44 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 08:53:10 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 08:54:37 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 08:55:05 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 09:00:03 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 09:03:16 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 09:08:21 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 09:12:02 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 09:18:26 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 09:21:14 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 09:30:05 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 10:28:00 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 11:04:29 - ERROR -com.adcc.raim.controller.UserController.findByUserNameAndPassword(UserController.java:246) - [Ljava.lang.StackTraceElement;@5f1d9b89
-2017-12-11 11:04:46 - ERROR -com.adcc.raim.controller.UserController.findByUserNameAndPassword(UserController.java:246) - [Ljava.lang.StackTraceElement;@73073b53
-2017-12-11 11:04:48 - ERROR -com.adcc.raim.controller.UserController.findByUserNameAndPassword(UserController.java:246) - [Ljava.lang.StackTraceElement;@5fc80124
-2017-12-11 11:07:42 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 11:08:03 - ERROR -com.adcc.raim.controller.UserController.findByUserNameAndPassword(UserController.java:254) - [Ljava.lang.StackTraceElement;@334ceb19
-2017-12-11 11:08:11 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 11:08:37 - ERROR -com.adcc.raim.controller.UserController.findByUserNameAndPassword(UserController.java:254) - [Ljava.lang.StackTraceElement;@309c7df9
-2017-12-11 11:08:48 - ERROR -com.adcc.raim.controller.UserController.findByUserNameAndPassword(UserController.java:254) - [Ljava.lang.StackTraceElement;@74d1664
-2017-12-11 11:11:23 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 11:11:47 - ERROR -com.adcc.raim.controller.UserController.findByUserNameAndPassword(UserController.java:254) - [Ljava.lang.StackTraceElement;@3d4dd7e7
-2017-12-11 11:11:51 - ERROR -com.adcc.raim.controller.UserController.findByUserNameAndPassword(UserController.java:254) - [Ljava.lang.StackTraceElement;@9ecafef
-2017-12-11 11:13:06 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 11:19:07 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 11:22:26 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 11:22:40 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 11:24:10 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 12:59:40 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 13:21:51 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 13:23:59 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 14:33:42 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 14:36:30 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 14:44:15 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 14:45:31 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 14:47:06 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 14:48:02 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 14:53:27 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 15:04:24 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 15:05:04 - ERROR -com.adcc.raim.controller.UserController.findByUserNameAndPassword(UserController.java:248) - [Ljava.lang.StackTraceElement;@583c10b2
-2017-12-11 15:05:15 - ERROR -com.adcc.raim.controller.UserController.findByUserNameAndPassword(UserController.java:248) - [Ljava.lang.StackTraceElement;@479177c8
-2017-12-11 15:05:34 - ERROR -com.adcc.raim.controller.UserController.findByUserNameAndPassword(UserController.java:248) - [Ljava.lang.StackTraceElement;@7faf0a69
-2017-12-11 15:05:45 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 15:06:14 - ERROR -com.adcc.raim.controller.UserController.findByUserNameAndPassword(UserController.java:248) - [Ljava.lang.StackTraceElement;@5c10de5c
-2017-12-11 15:06:32 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 15:06:58 - ERROR -com.adcc.raim.controller.UserController.findByUserNameAndPassword(UserController.java:248) - [Ljava.lang.StackTraceElement;@3f38bb01
-2017-12-11 15:10:16 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 15:10:44 - ERROR -com.adcc.raim.controller.UserController.findByUserNameAndPassword(UserController.java:248) - [Ljava.lang.StackTraceElement;@11bc3c32
-2017-12-11 15:12:54 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 15:13:23 - ERROR -com.adcc.raim.controller.UserController.findByUserNameAndPassword(UserController.java:248) - [Ljava.lang.StackTraceElement;@78754b4c
-2017-12-11 15:14:45 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 15:14:53 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 15:15:00 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 15:18:55 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 15:19:24 - ERROR -com.adcc.raim.controller.UserController.findByUserNameAndPassword(UserController.java:248) - [Ljava.lang.StackTraceElement;@338a7834
-2017-12-11 15:23:07 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 15:25:37 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 15:25:44 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 15:26:21 - ERROR -com.adcc.raim.controller.UserController.findByUserNameAndPassword(UserController.java:252) - [Ljava.lang.StackTraceElement;@445887e8
-2017-12-11 15:29:24 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 15:29:42 - ERROR -com.adcc.raim.controller.UserController.findByUserNameAndPassword(UserController.java:250) - [Ljava.lang.StackTraceElement;@479d31f
-2017-12-11 15:30:50 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 15:33:44 - ERROR -com.adcc.raim.controller.UserController.findByUserNameAndPassword(UserController.java:250) - [Ljava.lang.StackTraceElement;@43938e8a
-2017-12-11 15:34:48 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 15:34:59 - ERROR -com.adcc.raim.controller.UserController.findByUserNameAndPassword(UserController.java:250) - Invalid bound statement (not found): com.adcc.raim.dao.UserDAO.findByUserNameAndPassword
-2017-12-11 15:35:07 - ERROR -com.adcc.raim.controller.UserController.findByUserNameAndPassword(UserController.java:250) - Invalid bound statement (not found): com.adcc.raim.dao.UserDAO.findByUserNameAndPassword
-2017-12-11 15:45:09 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 15:45:15 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 16:13:49 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 16:29:41 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 16:33:36 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 16:33:56 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 16:34:25 - ERROR -com.adcc.raim.controller.UserController.findByUserNameAndPassword(UserController.java:250) - [Ljava.lang.StackTraceElement;@33f6ab57
-2017-12-11 16:34:52 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 16:35:40 - ERROR -com.adcc.raim.controller.UserController.findByUserNameAndPassword(UserController.java:250) - [Ljava.lang.StackTraceElement;@79880e7d
-2017-12-11 16:37:05 - ERROR -com.adcc.raim.controller.UserController.findByUserNameAndPassword(UserController.java:250) - [Ljava.lang.StackTraceElement;@7f1a1790
-2017-12-11 16:38:51 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 16:39:08 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 16:40:54 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 16:42:19 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 16:43:51 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 16:44:20 - ERROR -com.adcc.raim.controller.UserController.findByUserNameAndPassword(UserController.java:250) - [Ljava.lang.StackTraceElement;@78cf5d90
-2017-12-11 16:48:18 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 16:53:39 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 16:59:25 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 17:03:44 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 17:04:28 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 17:05:01 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
-2017-12-11 17:06:13 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 08:20:39 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 08:21:19 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 08:43:29 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 09:43:52 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 09:44:30 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 09:51:32 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 09:52:05 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 09:52:56 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 09:53:24 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 09:55:22 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 09:55:29 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 09:55:38 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 09:56:14 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 09:56:48 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 10:07:22 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 10:08:36 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 10:10:40 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 10:33:39 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 10:49:16 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 10:54:01 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 10:54:14 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 10:55:40 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 10:56:16 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 11:00:51 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 11:01:19 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 11:05:46 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 11:07:59 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 11:14:01 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 13:54:14 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 13:58:17 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 13:58:55 - INFO -com.adcc.raim.controller.ErrorProcessControllerAdvice.processException(ErrorProcessControllerAdvice.java:45) - 自定义异常处理-Exception
+2017-12-12 14:01:46 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 14:01:51 - INFO -com.adcc.raim.controller.ErrorProcessControllerAdvice.processException(ErrorProcessControllerAdvice.java:45) - 自定义异常处理-Exception
+2017-12-12 14:02:05 - INFO -com.adcc.raim.controller.ErrorProcessControllerAdvice.processException(ErrorProcessControllerAdvice.java:45) - 自定义异常处理-Exception
+2017-12-12 14:02:35 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 14:02:48 - INFO -com.adcc.raim.controller.ErrorProcessControllerAdvice.processException(ErrorProcessControllerAdvice.java:45) - 自定义异常处理-Exception
+2017-12-12 14:03:00 - INFO -com.adcc.raim.controller.ErrorProcessControllerAdvice.processException(ErrorProcessControllerAdvice.java:45) - 自定义异常处理-Exception
+2017-12-12 14:03:24 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 14:03:44 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:311) - 
+2017-12-12 14:04:13 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:311) - 
+2017-12-12 14:06:20 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 14:06:32 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:311) - 
+2017-12-12 14:07:20 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:311) - 
+2017-12-12 14:21:27 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 14:23:35 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 14:23:44 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:309) - 
+2017-12-12 14:37:46 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 14:37:57 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:311) - 
+2017-12-12 14:38:05 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 14:51:39 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 15:02:53 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 15:03:07 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:334) - 
+2017-12-12 15:11:01 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 15:14:00 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 15:20:14 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 15:32:19 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 15:32:29 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:339) - 
+2017-12-12 15:50:31 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 15:52:56 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 15:53:11 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 15:53:16 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:339) - 
+2017-12-12 15:58:01 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 16:01:47 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 16:03:22 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 16:03:33 - ERROR -com.adcc.raim.controller.UserController.userUpdate(UserController.java:377) - 
+2017-12-12 16:03:35 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:339) - 
+2017-12-12 16:56:52 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 16:57:12 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 16:59:36 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 16:59:45 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:339) - 
+2017-12-12 16:59:52 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 17:02:41 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-12 17:02:47 - ERROR -com.adcc.raim.controller.UserController.userUpdate(UserController.java:377) - 
+2017-12-12 17:02:48 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:339) - 
+2017-12-12 17:10:28 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 08:55:26 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 08:56:13 - INFO -com.adcc.raim.controller.ErrorProcessControllerAdvice.processException(ErrorProcessControllerAdvice.java:45) - 自定义异常处理-Exception
+2017-12-13 08:56:21 - INFO -com.adcc.raim.controller.ErrorProcessControllerAdvice.processException(ErrorProcessControllerAdvice.java:45) - 自定义异常处理-Exception
+2017-12-13 08:58:20 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 08:58:28 - INFO -com.adcc.raim.controller.ErrorProcessControllerAdvice.processException(ErrorProcessControllerAdvice.java:45) - 自定义异常处理-Exception
+2017-12-13 08:58:29 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:339) - 
+2017-12-13 08:58:30 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:339) - 
+2017-12-13 08:58:48 - INFO -com.adcc.raim.controller.ErrorProcessControllerAdvice.processException(ErrorProcessControllerAdvice.java:45) - 自定义异常处理-Exception
+2017-12-13 09:02:43 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 09:03:03 - INFO -com.adcc.raim.controller.ErrorProcessControllerAdvice.processException(ErrorProcessControllerAdvice.java:45) - 自定义异常处理-Exception
+2017-12-13 09:03:04 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:339) - 
+2017-12-13 09:05:36 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 09:10:05 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 09:14:48 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 09:28:45 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 09:31:56 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 09:32:03 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:339) - 
+2017-12-13 09:32:03 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:339) - 
+2017-12-13 09:32:18 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 09:33:58 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 09:34:06 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:339) - 
+2017-12-13 09:36:15 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 09:36:25 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:339) - 
+2017-12-13 09:36:31 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:339) - 
+2017-12-13 09:36:38 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:339) - 
+2017-12-13 09:38:23 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 09:41:23 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 09:42:20 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:339) - 
+2017-12-13 09:47:11 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 09:47:40 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:339) - 
+2017-12-13 09:47:50 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
