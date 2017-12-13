@@ -506,7 +506,13 @@ public class UserController {
         ModelMap result = new ModelMap();
         try {
             user.setUserid(UUIDgenerator.generateUuid());
-            user.getUsertype();
+            user.setPassword(UserUtil.MD5(user.getPassword()));
+            //用户类型(-1：管理员,0：注册用户,1：行业用户,2：webservice用户)，注册时是行业用户
+            user.setUsertype(1);
+            //审批结果(-1：审批中, 0：未通过审批, 1：通过审批)，注册时是审批中
+            user.setAuditresult(-1);
+            //用户状态(0：无效 1：有效),注册时是无效的
+            user.setUserstate(0);
             int result1 = userService.userRegister(user);
             if(result1>0){
                 result.put("msg", "succ");

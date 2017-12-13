@@ -170,3 +170,9 @@
 2017-12-13 17:24:13 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:363) - 
 2017-12-13 17:27:03 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:363) - 
 2017-12-13 17:27:11 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 17:40:44 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 17:43:58 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 17:47:20 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 17:48:02 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 17:49:27 - ERROR -com.adcc.raim.controller.UserController.findByUserNameAndPassword(UserController.java:270) - 
+2017-12-13 17:51:20 - ERROR -com.adcc.raim.controller.UserController.findByUserNameAndPassword(UserController.java:270) - 

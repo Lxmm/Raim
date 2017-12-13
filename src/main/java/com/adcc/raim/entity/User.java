@@ -23,13 +23,13 @@ public class User {
     private Integer auditresult;    // 审批结果(-1：审批中,0：未通过审批,1：通过审批)
     private String auditcomment;    // 审批备注(审批未通过/通过的原因说明)
     private Date auditdate;    // 审批日期(注册用户通过审批成为行业用户的日期时间)
-    private String userstate;    // 用户状态
+    private Integer userstate;    // 用户状态
 
     public User(){
 
     }
 
-    public User(String userid, String loginname, String username, String password, String company, String job, String telephone, String mobile, String address, String zip, String mail, Integer usertype, Date regdate, Date appdate, Integer auditresult, String auditcomment, Date auditdate, String userstate) {
+    public User(String userid, String loginname, String username, String password, String company, String job, String telephone, String mobile, String address, String zip, String mail, Integer usertype, Date regdate, Date appdate, Integer auditresult, String auditcomment, Date auditdate, Integer userstate) {
         this.userid = userid;
         this.loginname = loginname;
         this.username = username;
@@ -186,11 +186,11 @@ public class User {
         this.auditdate = auditdate;
     }
 
-    public String getUserstate() {
+    public Integer getUserstate() {
         return userstate;
     }
 
-    public void setUserstate(String userstate) {
+    public void setUserstate(Integer userstate) {
         this.userstate = userstate;
     }
 }
