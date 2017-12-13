@@ -1,6 +1,7 @@
 package com.adcc.raim.controller;
 
 import com.adcc.raim.Tools.LoadYML;
+import com.adcc.raim.Tools.UUIDgenerator;
 import com.adcc.raim.Tools.UserUtil;
 import com.adcc.raim.entity.User;
 import com.adcc.raim.service.UserService;
@@ -8,14 +9,16 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.Date;
+import java.util.TimeZone;
 
 /**
  * Created by i on 2017/10/13.
@@ -32,168 +35,187 @@ public class UserController {
 
     //首页
     @RequestMapping(value = "/index")
-    public String index(Model model,HttpSession session){
+    public ModelAndView index(HttpSession session){
+        ModelAndView result =new ModelAndView("index");
         String loginname = (String) session.getAttribute("loginname");
-        model.addAttribute("loginname",loginname);
-         return "index";
+        result.addObject("loginname",loginname);
+         return result;
     }
 
     //简介
     @RequestMapping(value = "/introduction")
-    public String introduction(HttpSession session, Model model){
+    public ModelAndView introduction(HttpSession session){
+        ModelAndView result =new ModelAndView("introduction");
         String loginname = (String) session.getAttribute("loginname");
-        model.addAttribute("loginname",loginname);
-        return "introduction";
+        result.addObject("loginname", loginname);
+        return result;
     }
 
 
     //预测
     @RequestMapping(value = "/raimintro")
-    public String raimintro(HttpSession session, Model model){
+    public ModelAndView raimintro(HttpSession session){
+        ModelAndView result =new ModelAndView("raimintro");
         String loginname = (String) session.getAttribute("loginname");
-        model.addAttribute("loginname",loginname);
-        return "raimintro";
+        result.addObject("loginname", loginname);
+        return result;
     }
 
 
     //关于我们
     @RequestMapping(value = "/about")
-    public String about(HttpSession session, Model model){
+    public ModelAndView about(HttpSession session){
+        ModelAndView result =new ModelAndView("about");
         String loginname = (String) session.getAttribute("loginname");
-        model.addAttribute("loginname",loginname);
-        return "about";
+        result.addObject("loginname", loginname);
+        return result;
     }
 
 
     //首页—系统公告
     @RequestMapping(value = "/systemnoticeList")
-    public String systemnoticeList(HttpSession session, Model model){
+    public ModelAndView systemnoticeList(HttpSession session){
+        ModelAndView result =new ModelAndView("systemnoticeList");
         String loginname = (String) session.getAttribute("loginname");
-        model.addAttribute("loginname",loginname);
-        return "systemnoticeList";
+        result.addObject("loginname",loginname);
+        return result;
     }
 
 
     //首页—系统公告
     @RequestMapping(value = "/service")
-    public String service(HttpSession session, Model model){
+    public ModelAndView service(HttpSession session){
+        ModelAndView result =new ModelAndView("service");
         String loginname = (String) session.getAttribute("loginname");
-        model.addAttribute("loginname",loginname);
-        return "service";
+        result.addObject("loginname", loginname);
+        return result;
     }
 
 
     //首页—版本声明
     @RequestMapping(value = "/copyright")
-    public String copyright(HttpSession session, Model model){
+    public ModelAndView copyright(HttpSession session){
+        ModelAndView result =new ModelAndView("copyright");
         String loginname = (String) session.getAttribute("loginname");
-        model.addAttribute("loginname",loginname);
-        return "copyright";
+        result.addObject("loginname", loginname);
+        return result;
     }
 
 
     //首页—联系我们
     @RequestMapping(value = "/contact")
-    public String contact(HttpSession session, Model model){
+    public ModelAndView contact(HttpSession session){
+        ModelAndView result =new ModelAndView("contact");
         String loginname = (String) session.getAttribute("loginname");
-        model.addAttribute("loginname",loginname);
-        return "contact";
+        result.addObject("loginname",loginname);
+        return result;
     }
 
 
     //关于我们—用户留言
     @RequestMapping(value = "/guest")
-    public String guest(HttpSession session, Model model){
+    public ModelAndView guest(HttpSession session){
+        ModelAndView result =new ModelAndView("guest");
         String loginname = (String) session.getAttribute("loginname");
-        model.addAttribute("loginname",loginname);
-        return "guest";
+        result.addObject("loginname", loginname);
+        return result;
     }
 
     //简介—系统结构
     @RequestMapping(value = "/structure")
-    public String structure(HttpSession session, Model model){
+    public ModelAndView structure(HttpSession session){
+        ModelAndView result =new ModelAndView("structure");
         String loginname = (String) session.getAttribute("loginname");
-        model.addAttribute("loginname",loginname);
-        return "structure";
+        result.addObject("loginname", loginname);
+        return result;
     }
 
 
     //RAIM预测—GPS卫星状态
     @RequestMapping(value = "/gpsstate")
-    public String gpsstate(HttpSession session, Model model){
+    public ModelAndView gpsstate(HttpSession session){
+        ModelAndView result =new ModelAndView("gpsstate");
         String loginname = (String) session.getAttribute("loginname");
-        model.addAttribute("loginname",loginname);
-        return "gpsstate";
+        result.addObject("loginname", loginname);
+        return result;
     }
 
 
     //RAIM预测—机场预测
     @RequestMapping(value = "/airPort")
-    public String airPort(HttpSession session, Model model){
+    public ModelAndView airPort(HttpSession session){
+        ModelAndView result =new ModelAndView("airPort");
         String loginname = (String) session.getAttribute("loginname");
-        model.addAttribute("loginname",loginname);
-        return "airPort";
+        result.addObject("loginname", loginname);
+        return result;
     }
 
 
     //RAIM预测—终端区预测
     @RequestMapping(value = "/npa")
-    public String npa(HttpSession session, Model model){
+    public ModelAndView npa(HttpSession session){
+        ModelAndView result =new ModelAndView("npa");
         String loginname = (String) session.getAttribute("loginname");
-        model.addAttribute("loginname",loginname);
-        return "npa";
+        result.addObject("loginname", loginname);
+        return result;
     }
 
 
     //RAIM预测—航线预测
     @RequestMapping(value = "/fairwayForecast")
-    public String fairwayForecast(HttpSession session, Model model){
+    public ModelAndView fairwayForecast(HttpSession session){
+        ModelAndView result =new ModelAndView("fairwayForecast");
         String loginname = (String) session.getAttribute("loginname");
-        model.addAttribute("loginname",loginname);
-        return "fairwayForecast";
+        result.addObject("loginname", loginname);
+        return result;
     }
 
 
     //RAIM预测—区域预测
     @RequestMapping(value = "/areaForecast")
-    public String areaForecast(HttpSession session, Model model){
+    public ModelAndView areaForecast(HttpSession session){
+        ModelAndView result =new ModelAndView("areaForecast");
         String loginname = (String) session.getAttribute("loginname");
-        model.addAttribute("loginname",loginname);
-        return "areaForecast";
+        result.addObject("loginname", loginname);
+        return result;
     }
 
 
     //RAIM预测—关于
     @RequestMapping(value = "/announce")
-    public String announce(HttpSession session, Model model){
+    public ModelAndView announce(HttpSession session){
+        ModelAndView result =new ModelAndView("announce");
         String loginname = (String) session.getAttribute("loginname");
-        model.addAttribute("loginname",loginname);
-        return "announce";
+        result.addObject("loginname", loginname);
+        return result;
     }
 
     //关于我们-用户留言—添加留言
     @RequestMapping(value = "/guestAdd")
-    public String guestAdd(HttpSession session, Model model){
+    public ModelAndView guestAdd(HttpSession session){
+        ModelAndView result =new ModelAndView("guestAdd");
         String loginname = (String) session.getAttribute("loginname");
-        model.addAttribute("loginname",loginname);
-        return "guestAdd";
+        result.addObject("loginname", loginname);
+        return result;
     }
 
 
     //登录
     @RequestMapping(value = "/userLogin")
-    public String userLogin(HttpSession session, Model model){
+    public ModelAndView userLogin(HttpSession session){
+        ModelAndView result =new ModelAndView("userLogin");
         String loginname = (String) session.getAttribute("loginname");
-        model.addAttribute("loginname",loginname);
-        return "userLogin";
+        result.addObject("loginname", loginname);
+        return result;
     }
 
     //注册
     @RequestMapping(value = "/userRegister")
-    public String userRegister(HttpSession session, Model model){
+    public ModelAndView userRegister(HttpSession session){
+        ModelAndView result =new ModelAndView("userRegister");
         String loginname = (String) session.getAttribute("loginname");
-        model.addAttribute("loginname",loginname);
-        return "userRegister";
+        result.addObject("loginname",loginname);
+        return result;
     }
 
 
@@ -203,27 +225,27 @@ public class UserController {
      * @param model
      * @return
      */
-    @RequestMapping(value = "/queryAllUserInfo")
-    public String queryAllUserInfo(HttpServletRequest request, Model model,HttpSession session){
-        List<User> userList = userService.queryAllUserInfo();
-//        String userName =userList.get(0).getUsername();
-//        model.addAttribute("userName",userName);
-        model.addAttribute("userList",userList);
-        String loginname = userList.get(0).getUsername();
-        session.setAttribute("loginname",loginname);
-        return "userList";
-    }
+//    @RequestMapping(value = "/queryAllUserInfo")
+//    public String queryAllUserInfo(HttpServletRequest request, Model model,HttpSession session){
+//        List<User> userList = userService.queryAllUserInfo();
+////        String userName =userList.get(0).getUsername();
+////        model.addAttribute("userName",userName);
+//        model.addAttribute("userList",userList);
+//        String loginname = userList.get(0).getUsername();
+//        session.setAttribute("loginname",loginname);
+//        return "userList";
+//    }
 
 
 
     /**
-     * 根据用户名密码查询
+     * 根据用户名密码查询（登录）
      * @return
      */
     @ResponseBody
     @RequestMapping(value = "/findByUserNameAndPassword", method = RequestMethod.POST)
-    public Map<String, Object> findByUserNameAndPassword(String loginname,String password,HttpSession session,Model model) {
-        Map<String, Object> result = new HashMap<>();
+    public ModelMap findByUserNameAndPassword(String loginname,String password,HttpSession session) {
+        ModelMap result = new ModelMap();
         try {
             password = UserUtil.MD5(password);
             User user = userService.findByUserNameAndPassword(loginname,password);
@@ -240,7 +262,6 @@ public class UserController {
                 }else {
                     //user.getAuditresult()==1通过审核的成功跳转到页面
                     result.put("msg", "succ");
-                    model.addAttribute("loginname",loginname);
                     session.setAttribute("loginname", loginname);
                 }
             }
@@ -261,8 +282,8 @@ public class UserController {
      */
     @ResponseBody
     @RequestMapping(value = "/loginOut", method = RequestMethod.POST)
-    public Map<String, Object> loginOut(HttpSession session,Model model) {
-        Map<String, Object> result = new HashMap<>();
+    public ModelMap loginOut(HttpSession session) {
+        ModelMap result = new ModelMap();
         try {
             session.removeAttribute("loginname");
             result.put("msg", "succ");
@@ -278,12 +299,14 @@ public class UserController {
 
 
     /**
-     * 根据用户名查询
+     * 根据用户名查询（点击用户名，查看用户信息）
      * @return
      */
     @RequestMapping(value = "/findByName")
-    public String findByName(HttpSession session,Model model) {
+    public ModelAndView findByName(HttpSession session) {
+        ModelAndView result;
         try {
+            result =new ModelAndView("userLoginSuccess");
             String loginname = (String) session.getAttribute("loginname");
             User user = userService.findByName(loginname);
             String username = user.getUsername();
@@ -322,22 +345,23 @@ public class UserController {
                 auditresult="通过审批";
             }
 
-            model.addAttribute("loginname",loginname);
-            model.addAttribute("username",username);
-            model.addAttribute("company",company);
-            model.addAttribute("job",job);
-            model.addAttribute("telephone",telephone);
-            model.addAttribute("mobile",mobile);
-            model.addAttribute("address",address);
-            model.addAttribute("zip",zip);
-            model.addAttribute("mail",mail);
-            model.addAttribute("regdate",regdate);
-            model.addAttribute("usertype",usertype);
-            model.addAttribute("auditresult",auditresult);
-            return "userLoginSuccess";
+            result.addObject("loginname", loginname);
+            result.addObject("username", username);
+            result.addObject("company", company);
+            result.addObject("job", job);
+            result.addObject("telephone", telephone);
+            result.addObject("mobile", mobile);
+            result.addObject("address", address);
+            result.addObject("zip", zip);
+            result.addObject("mail", mail);
+            result.addObject("regdate", regdate);
+            result.addObject("usertype", usertype);
+            result.addObject("auditresult", auditresult);
+            return result;
         }catch (Exception e){
+            result =new ModelAndView("error");
             logger.error(e.getMessage());
-            return "error";
+            return result;
         }
 
     }
@@ -345,12 +369,14 @@ public class UserController {
 
 
     /**
-     * 根据用户名查询
+     * 根据用户名查询(修改用户信息)
      * @return
      */
     @RequestMapping(value = "/userUpdate")
-    public String userUpdate(HttpSession session,Model model) {
+    public ModelAndView userUpdate(HttpSession session) {
+        ModelAndView result;
         try {
+            result =new ModelAndView("userUpdate");
             String loginname = (String) session.getAttribute("loginname");
             User user = userService.findByName(loginname);
             String username = user.getUsername();
@@ -362,24 +388,23 @@ public class UserController {
             String zip = user.getZip();
             String mail = user.getMail();
 
-            model.addAttribute("loginname",loginname);
-            model.addAttribute("username",username);
-            model.addAttribute("company",company);
-            model.addAttribute("job",job);
-            model.addAttribute("telephone",telephone);
-            model.addAttribute("mobile",mobile);
-            model.addAttribute("address",address);
-            model.addAttribute("zip",zip);
-            model.addAttribute("mail",mail);
-
-            return "userUpdate";
+            result.addObject("loginname", loginname);
+            result.addObject("username", username);
+            result.addObject("company", company);
+            result.addObject("job", job);
+            result.addObject("telephone", telephone);
+            result.addObject("mobile", mobile);
+            result.addObject("address", address);
+            result.addObject("zip", zip);
+            result.addObject("mail", mail);
+            return result;
         }catch (Exception e){
+            result =new ModelAndView("error");
             logger.error(e.getMessage());
-            return "error";
+            return result;
         }
 
     }
-
 
 
     /**
@@ -388,8 +413,8 @@ public class UserController {
      */
     @ResponseBody
     @RequestMapping(value = "/userUpdateCommit", method = RequestMethod.POST)
-    public Map<String, Object> userUpdateCommit(HttpSession session,Model model,String username,String company,String job,String telephone,String mobile,String address,String zip,String mail) {
-        Map<String, Object> result = new HashMap<>();
+    public ModelMap userUpdateCommit(HttpSession session,String username,String company,String job,String telephone,String mobile,String address,String zip,String mail) {
+        ModelMap result = new ModelMap();
         try {
             String loginname = (String) session.getAttribute("loginname");
             int result1 = userService.userUpdate(username,company,job,telephone,mobile,address,zip,mail,loginname);
@@ -414,14 +439,17 @@ public class UserController {
      * @return
      */
     @RequestMapping(value = "/updatePass")
-    public String updatePass(HttpSession session,Model model) {
+    public  ModelAndView  updatePass(HttpSession session,Model model) {
+        ModelAndView result;
         try {
+            result= new  ModelAndView("userPassUpdate");
             String loginname = (String) session.getAttribute("loginname");
             model.addAttribute("loginname",loginname);
-            return "userPassUpdate";
+            return result;
         }catch (Exception e){
+            result= new  ModelAndView("error");
             logger.error(e.getMessage());
-            return "error";
+            return result;
         }
 
     }
@@ -433,26 +461,57 @@ public class UserController {
      */
     @ResponseBody
     @RequestMapping(value = "/userPassUpdate", method = RequestMethod.POST)
-    public Map<String, Object> userPassUpdate(HttpSession session,Model model,String tbOldPass,String tbNewPass,String tbNewPass2) {
-        Map<String, Object> result = new HashMap<>();
+    public ModelMap userPassUpdate(HttpSession session,String tbOldPass,String tbNewPass,String tbNewPass2) {
+        ModelMap result = new ModelMap();
         try {
-            tbOldPass = UserUtil.MD5(tbOldPass);
             String loginname = (String) session.getAttribute("loginname");
             User user= userService.findByName(loginname);
-            if(user.getPassword().equals(tbOldPass)){
-                if(tbNewPass.equals(tbNewPass2)){
-                    tbNewPass = UserUtil.MD5(tbNewPass);
-                    int result1 = userService.userPassUpdate(tbNewPass,loginname);
-                    if(result1>0){
-                        result.put("msg", "succ");
+            if (!tbOldPass.equals(tbNewPass)){
+                tbOldPass = UserUtil.MD5(tbOldPass);
+                if(user.getPassword().equals(tbOldPass)){
+                    if(tbNewPass.equals(tbNewPass2)){
+                        tbNewPass = UserUtil.MD5(tbNewPass);
+                        int result1 = userService.userPassUpdate(tbNewPass,loginname);
+                        if(result1>0){
+                            result.put("msg", "succ");
+                        }else {
+                            result.put("msg", "修改失败！");
+                        }
                     }else {
-                        result.put("msg", "修改失败！");
+                        result.put("msg", "两次输入的新密码不一致,请重新输入！");
                     }
                 }else {
-                    result.put("msg", "两次输入的新密码不一致,请重新输入！");
+                    result.put("msg", "旧密码不正确，请重新输入！");
                 }
             }else {
-                result.put("msg", "旧密码不正确，请重新输入！");
+                result.put("msg", "旧密码和新密码不能相同！");
+            }
+            return result;
+        }catch (Exception e){
+            logger.error(e.getMessage());
+            result.put("msg", "err");
+            return result;
+        }
+
+    }
+
+
+    /**
+     * 注册
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/userRegister", method = RequestMethod.POST)
+    public ModelMap userRegister(User user) {
+        ModelMap result = new ModelMap();
+        try {
+            user.setUserid(UUIDgenerator.generateUuid());
+            user.getUsertype();
+            int result1 = userService.userRegister(user);
+            if(result1>0){
+                result.put("msg", "succ");
+            }else {
+                result.put("msg", "err");
             }
             return result;
         }catch (Exception e){

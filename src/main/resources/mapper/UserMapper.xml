@@ -58,4 +58,36 @@
         where loginname = #{loginname,jdbcType=VARCHAR}
     </update>
 
+
+    <insert id="userRegister" parameterType="com.adcc.raim.entity.User" >
+        insert into r_user
+        (
+        userid,
+        loginname,
+        password,
+        username,
+        company,
+        job,
+        telephone,
+        mobile,
+        address,
+        zip,
+        mail
+        )
+        values
+        (
+        #{userid,jdbcType=VARCHAR},
+        #{loginname,jdbcType=VARCHAR},
+        #{password,jdbcType=INTEGER},
+        #{username,jdbcType=VARCHAR},
+        #{company,jdbcType=INTEGER},
+        #{job,jdbcType=INTEGER},
+        #{telephone,jdbcType=INTEGER},
+        #{mobile,jdbcType=INTEGER},
+        #{address,jdbcType=INTEGER},
+        #{zip,jdbcType=INTEGER},
+        #{mail,jdbcType=INTEGER}
+        )
+    </insert>
+
 </mapper>

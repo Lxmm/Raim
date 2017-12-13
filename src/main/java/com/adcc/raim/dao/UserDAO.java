@@ -23,4 +23,6 @@ public interface UserDAO {
 
     int userPassUpdate(@Param("tbNewPass")String tbNewPass,@Param("loginname")String loginname);
 
+    int userRegister(User user);
+
 }

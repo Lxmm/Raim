@@ -24,18 +24,18 @@
 
 
     </style>
-    <script src="../js/jquery-2.1.4.min.js"></script>
+    <script src="../js/jquery-2.1.4.min.js" type="text/javascript"></script>
     <!--<link href="../bootstrap/css/bootstrap.css" rel="stylesheet" />-->
     <script src="../js/menu.js" type="text/javascript"></script>
     <script src="../js/main_nav.js" type="text/javascript"></script>
     <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../css/css.css" />
-    <link rel="stylesheet" href="../css/validatorAuto.css" />
+    <link rel="stylesheet" href="../css/css.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/validatorAuto.css" type="text/css"/>
     <!--<link rel="stylesheet" href="../css/layui.css"/>-->
-    <script src="../js/layui.js"></script>
-    <script src="../js/header.js"></script>
-    <script src="../js/formValidator-4.0.1.js"></script>
-    <script src="../js/formValidatorRegex.js"></script>
+    <script src="../js/layui.js" type="text/javascript"></script>
+    <script src="../js/header.js" type="text/javascript"></script>
+    <script src="../js/formValidator-4.0.1.js" charset="UTF-8" type="text/javascript"></script>
+    <script src="../js/formValidatorRegex.js" charset="UTF-8" type="text/javascript"></script>
     <script src="../js/userUpdate.js"></script>
     <script type="text/javascript">
         //<![CDATA[
@@ -51,6 +51,83 @@
             }
         }
         //]]>
+    </script>
+
+    <script type="text/javascript" language="javascript">
+
+        function up() {
+            document.getElementById("lbError").innerHTML = "";
+        }
+        function back() {
+            //            window.opener.location.href = window.opener.location.href;
+            //            if (window.opener.progreesWindow) {
+            //                window.opener.progressWindow.close();
+            //    }
+            //window.close()
+
+            window.location.href = "userLoginSuccess.aspx"
+        }
+        function getBytesCount(objects, count) {
+            var id = objects.id;
+            var str = document.getElementById(id).value
+            var bytesCouont = 0;
+            if (str != null) {
+                for (var i = 0; i < str.length; i++) {
+                    var c = str.charAt(i);
+                    if (/^[\u0000-\u00ff]$/.test(c)) {
+                        bytesCouont += 1;
+                    }
+                    else {
+                        bytesCouont += 2;
+                    }
+                }
+            }
+            if (bytesCouont > count) {
+                document.getElementById("divErrorinfo").innerHTML = "内容不得超过" + count + "字节";
+                document.getElementById("divErrorinfo").style.color = "red";
+                document.getElementById(id).focus();
+            }
+            else {
+                document.getElementById("divErrorinfo").innerHTML = "";
+            }
+        }
+        //表单验证
+        $(document).ready(function () {
+
+            //$.formValidator.initConfig({ formID: "form1", autoTip: true, onError: function (msg) { alert(msg) }, inIframe: true });
+            $.formValidator.initConfig({ formID: "form1", autoTip: true, inIframe: true, forevalid: true });
+            $("#tbTrueName").formValidator({
+                onShow: "至少1个最多20个字符", onFocus: "至少1个最多20个字符", onCorrect: "输入正确"
+            }).inputValidator({ min: 1, max: 20, onError: "输入内容过长或为空" });
+            $("#tbUnit").formValidator({
+                onShow: "至少1个最多50个字符", onFocus: "至少1个最多50个字符", onCorrect: "输入正确"
+            }).inputValidator({ min: 1, max: 50, onError: "输入内容过长或为空" });
+            $("#txtTitle").formValidator({
+                empty: true, onShow: "输入最多50个字符或为空", onFocus: "输入最多50个字符或为空", onCorrect: "输入正确", onEmpty: "输入内容为空！"
+            }).inputValidator({ min: 0, max: 50, onError: "输入内容过长" });
+            $("#tbPhoneNamber").formValidator({
+                empty: false, onShow: "至少1个最多20个字符", onFocus: "至少1个最多20个字符", onCorrect: "输入正确"
+            }).inputValidator({ min: 1, max: 20, onError: "内容过长或为空"
+            }).regexValidator({ regExp: "^[[0-9]{3}-|\[0-9]{4}-]?([0-9]{8}|[0-9]{7})?$", onError: "电话号码格式不正确" });
+            $("#tbMobleNamber").formValidator({
+                empty: true, onShow: "输入11位手机号码或空", onFocus: "输入11位手机号码或空", onCorrect: "输入正确", onEmpty: "输入内容为空！"
+            }).regexValidator({ regExp: "1[0-9]{10}", onError: "输入手机号码不正确" }).inputValidator({ max: 11, onError: "输入内容过长" });
+            $("#tbAdress").formValidator({
+                empty: false, onShow: "最多100个字符", onFocus: "最多100个字符", onCorrect: "输入正确"
+            }).inputValidator({ min: 1, max: 100, onError: "地址不能为空或内容过长" });
+            $("#txtZip").formValidator({
+                empty: true, onShow: "输入由6位数字或为空", onfocus: "输入由6位数字或为空", onCorrect: "输入正确", onEmpty: "输入内容为空"
+            }).regexValidator({ regExp: "zipcode", dataType: "enum", onError: "邮编格式不正确" });
+            $("#tbEmaill").formValidator({
+                empty: true, onShow: "输入合法邮箱地址或为空", onfocus: "输入合法邮箱地址或为空", onCorrect: "输入正确", onEmpty: "输入内容为空"
+            }).inputValidator({
+                min: 6, max: 100, onError: "输入的邮箱长度非法"
+            }).regexValidator({
+                regExp: "^([\\w-.]+)@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.)|(([\\w-]+.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(]?)$", onError: "输入邮箱格式不正确"
+            });
+
+            $.formValidator.reloadAutoTip();
+        });
     </script>
 </head>
 <body>

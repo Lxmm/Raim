@@ -35,4 +35,8 @@ public class UserService {
         return userDAO.userPassUpdate(tbNewPass, loginname);
     }
 
+    public int userRegister(User user){
+        return userDAO.userRegister(user);
+    }
+
 }
