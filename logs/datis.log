@@ -104,3 +104,69 @@
 2017-12-13 09:47:11 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
 2017-12-13 09:47:40 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:339) - 
 2017-12-13 09:47:50 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 10:22:09 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 11:00:49 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 11:06:16 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 11:06:25 - ERROR -com.adcc.raim.controller.UserController.userUpdate(UserController.java:377) - 
+2017-12-13 11:06:26 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:339) - 
+2017-12-13 11:22:42 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 11:23:40 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 11:26:45 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 11:30:00 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 12:56:57 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 13:01:33 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 13:14:49 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 13:16:06 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 13:16:51 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 13:20:24 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 13:43:00 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 13:44:35 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:339) - 
+2017-12-13 13:46:24 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 14:42:36 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 14:42:46 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 14:44:20 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 14:46:30 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 14:47:21 - ERROR -com.adcc.raim.controller.UserController.userRegister(UserController.java:493) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'loginname' cannot be null
+### The error may involve com.adcc.raim.dao.UserDAO.userRegister-Inline
+### The error occurred while setting parameters
+### SQL: insert into r_user (userid, loginname, username,password)         values         (?, ?, ?,?)
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'loginname' cannot be null
+; SQL []; Column 'loginname' cannot be null; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'loginname' cannot be null
+2017-12-13 14:48:34 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 14:49:09 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 14:49:54 - ERROR -com.adcc.raim.controller.UserController.userRegister(UserController.java:493) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'loginname' cannot be null
+### The error may involve com.adcc.raim.dao.UserDAO.userRegister-Inline
+### The error occurred while setting parameters
+### SQL: insert into r_user (userid, loginname, username,password)         values         (?, ?, ?,?)
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'loginname' cannot be null
+; SQL []; Column 'loginname' cannot be null; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'loginname' cannot be null
+2017-12-13 14:50:04 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 14:50:11 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 14:53:28 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 15:11:10 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 15:12:51 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 15:13:21 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:345) - 
+2017-12-13 15:39:19 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 15:43:49 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 15:46:32 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 15:47:13 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:346) - 
+2017-12-13 15:56:29 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 16:29:58 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 16:54:00 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 16:54:21 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:362) - 
+2017-12-13 16:58:54 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 17:09:38 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 17:10:25 - ERROR -com.adcc.raim.controller.UserController.userRegister(UserController.java:517) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'aaa' for key 'loginname_UNIQUE'
+### The error may involve com.adcc.raim.dao.UserDAO.userRegister-Inline
+### The error occurred while setting parameters
+### SQL: insert into r_user         (         userid,         loginname,         password,         username,         company,         job,         telephone,         mobile,         address,         zip,         mail         )         values         (         ?,         ?,         ?,         ?,         ?,         ?,         ?,         ?,         ?,         ?,         ?         )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'aaa' for key 'loginname_UNIQUE'
+; SQL []; Duplicate entry 'aaa' for key 'loginname_UNIQUE'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'aaa' for key 'loginname_UNIQUE'
+2017-12-13 17:14:45 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:363) - 
+2017-12-13 17:16:56 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
+2017-12-13 17:24:13 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:363) - 
+2017-12-13 17:27:03 - ERROR -com.adcc.raim.controller.UserController.findByName(UserController.java:363) - 
+2017-12-13 17:27:11 - INFO -com.adcc.raim.App.<clinit>(App.java:24) - 2
