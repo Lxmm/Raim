@@ -410,7 +410,7 @@ public class UserController {
 
 
     /**
-     * 根据用户名查询
+     * 跳转到修改密码的页面
      * @return
      */
     @RequestMapping(value = "/updatePass")
