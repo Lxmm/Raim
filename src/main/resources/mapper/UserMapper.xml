@@ -72,21 +72,35 @@
         mobile,
         address,
         zip,
-        mail
+        mail,
+        usertype,
+        regdate,
+        appdate,
+        auditresult,
+        auditcomment,
+        auditdate,
+        userstate
         )
         values
         (
         #{userid,jdbcType=VARCHAR},
         #{loginname,jdbcType=VARCHAR},
-        #{password,jdbcType=INTEGER},
+        #{password,jdbcType=VARCHAR},
         #{username,jdbcType=VARCHAR},
-        #{company,jdbcType=INTEGER},
-        #{job,jdbcType=INTEGER},
-        #{telephone,jdbcType=INTEGER},
-        #{mobile,jdbcType=INTEGER},
-        #{address,jdbcType=INTEGER},
-        #{zip,jdbcType=INTEGER},
-        #{mail,jdbcType=INTEGER}
+        #{company,jdbcType=VARCHAR},
+        #{job,jdbcType=VARCHAR},
+        #{telephone,jdbcType=VARCHAR},
+        #{mobile,jdbcType=VARCHAR},
+        #{address,jdbcType=VARCHAR},
+        #{zip,jdbcType=VARCHAR},
+        #{mail,jdbcType=VARCHAR},
+        #{usertype,jdbcType=INTEGER},
+        #{regdate,jdbcType=TIMESTAMP},
+        #{appdate,jdbcType=TIMESTAMP},
+        #{auditresult,jdbcType=INTEGER},
+        #{auditcomment,jdbcType=VARCHAR},
+       #{auditdate,jdbcType=TIMESTAMP},
+        #{userstate,jdbcType=INTEGER}
         )
     </insert>
 

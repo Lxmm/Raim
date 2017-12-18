@@ -51,6 +51,8 @@
     </script>
 </head>
 <body>
+
+<!--@thymesVar id="loginname" type="java.lang.String"-->
 <input type="hidden" th:value="${loginname}" id="loginname">
 <form method="post" action="airPort.html" id="form1">
     <div class="aspNetHidden">
@@ -91,6 +93,7 @@
                                         </td>
                                         <td width="207" class="p11">
                                             &nbsp;
+                                            <!--@thymesVar id="username" type="java.lang.String"-->
                                             <span id="lbuserName" th:text="${username}"></span>
                                         </td>
                                     </tr>
@@ -101,6 +104,7 @@
                                         </td>
                                         <td width="207" height="29" class="p11">
                                             &nbsp;
+                                            <!--@thymesVar id="company" type="java.lang.String"-->
                                             <span id="lbunit" th:text="${company}"></span>
                                         </td>
                                     </tr>
@@ -111,6 +115,7 @@
                                         </td>
                                         <td width="207" height="28" class="p11">
                                             &nbsp;
+                                            <!--@thymesVar id="job" type="java.lang.String"-->
                                             <span id="lbtitle" th:text="${job}"></span>
                                         </td>
                                     </tr>
@@ -121,6 +126,7 @@
                                         </td>
                                         <td width="207" height="28" class="p11">
                                             &nbsp;
+                                            <!--@thymesVar id="telephone" type="java.lang.String"-->
                                             <span id="lbphone" th:text="${telephone}"></span>
                                         </td>
                                     </tr>
@@ -131,6 +137,7 @@
                                         </td>
                                         <td width="207" height="28" class="p11">
                                             &nbsp;
+                                            <!--@thymesVar id="mobile" type="java.lang.String"-->
                                             <span id="lbmoble" th:text="${mobile}"></span>
                                         </td>
                                     </tr>
@@ -141,6 +148,7 @@
                                         </td>
                                         <td width="207" height="28" class="p11">
                                             &nbsp;
+                                            <!--@thymesVar id="address" type="java.lang.String"-->
                                             <span id="lbaddress" th:text="${address}"></span>
                                         </td>
                                     </tr>
@@ -151,6 +159,7 @@
                                         </td>
                                         <td width="207" height="28" class="p11">
                                             &nbsp;
+                                            <!--@thymesVar id="zip" type="java.lang.String"-->
                                             <span id="lbzip" th:text="${zip}"></span>
                                         </td>
                                     </tr>
@@ -161,6 +170,7 @@
                                         </td>
                                         <td width="207" height="28" class="p11">
                                             &nbsp;
+                                            <!--@thymesVar id="mail" type="java.lang.String"-->
                                             <span id="lbEmail" th:text="${mail}"></span>
                                         </td>
                                     </tr>
@@ -171,6 +181,7 @@
                                         </td>
                                         <td width="207" height="28" class="p11">
                                             &nbsp;
+                                            <!--@thymesVar id="regdate" type="java.lang.String"-->
                                             <span id="lbRegdate" th:text="${regdate}"></span>
                                         </td>
                                     </tr>
@@ -181,6 +192,7 @@
                                         </td>
                                         <td width="207" height="28" class="p11">
                                             &nbsp;
+                                            <!--@thymesVar id="usertype" type="java.lang.String"-->
                                             <span id="lbuserType" th:text="${usertype}"></span>
                                         </td>
                                     </tr>
@@ -191,6 +203,7 @@
                                         </td>
                                         <td width="207" height="28" class="p11">
                                             &nbsp;
+                                            <!--@thymesVar id="auditresult" type="java.lang.String"-->
                                             <span id="lbAR" style="color:Green;" th:text="${auditresult}"></span>
                                         </td>
                                     </tr>
@@ -203,7 +216,7 @@
                                     </tr>
                                     <tr>
                                         <td colspan="2" style="text-align: center; color: Blue;">
-                                            <a href="/userUpdate">修改个人信息</a> &nbsp;&nbsp; <a href="/updatePass">
+                                            <a href="/userUpdateView">修改个人信息</a> &nbsp;&nbsp; <a href="/updatePass">
                                             修改密码</a>
                                         </td>
                                     </tr>

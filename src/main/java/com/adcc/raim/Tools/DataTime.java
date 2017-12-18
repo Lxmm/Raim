@@ -1,5 +1,6 @@
 package com.adcc.raim.Tools;
 
+import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
@@ -19,19 +20,15 @@ public class DataTime {
     }
 
 
-    public String getDataTime(){
-        Date d = new Date();
+    public Timestamp getDataTime(){
+        Date date = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
-        String dateNowStr = sdf.format(d);
-        return dateNowStr;
+        String dateNowStr = sdf.format(date);
+        Timestamp time = Timestamp.valueOf(dateNowStr);
+        return time;
     }
 
-
-    public static void main(String[] args) {
-
-
-    }
 
 
 }

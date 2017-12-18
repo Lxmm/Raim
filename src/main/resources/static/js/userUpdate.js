@@ -1,19 +1,10 @@
-function userUpdateCommit() {
-
-    var username = $("#tbTrueName").val().trim();
-    var company = $("#tbUnit").val().trim();
-    var job = $("#txtTitle").val().trim();
-    var telephone = $("#tbPhoneNamber").val().trim();
-    var mobile = $("#tbMobleNamber").val().trim();
-    var address = $("#tbAdress").val().trim();
-    var zip = $("#txtZip").val().trim();
-    var mail = $("#tbEmaill").val().trim();
+function userUpdate() {
 
     $.ajax({
-        url: "/userUpdateCommit",
+        url: "/userUpdate",
         type: "post",
         async: false,
-        data: {"username": username, "company": company ,"job": job, "telephone": telephone, "mobile": mobile, "address": address, "zip": zip, "mail": mail},
+        data: $('#form1').serialize(),
         dataType: "json",
         success: function (data) {
             var msg = data.msg;

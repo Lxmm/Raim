@@ -51,6 +51,7 @@
     </script>
 </head>
 <body>
+<!--@thymesVar id="loginname" type="java.lang.String"-->
 <input type="hidden" th:value="${loginname}" id="loginname">
 <form method="post" action="areaForecast.html" id="form1">
     <div class="aspNetHidden">
@@ -111,7 +112,7 @@
                         <tr bgcolor="#EEEEEE">
                             <td height="30" class="style1">结果显示方式：</td>
                             <td height="30" class="style2">
-                                <select name="dlDisplay" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;dlDisplay\&#39;,\&#39;\&#39;)&#39;, 0)" id="dlDisplay" style="width:50%;">
+                                <select name="dlDisplay" onchange="javascript:setTimeout();" id="dlDisplay" style="width:50%;">
                                     <option value="2">统计图</option>
                                     <option value="1">快照图</option>
 

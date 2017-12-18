@@ -1,18 +1,4 @@
 function userRegister() {
-
-    var loginname = $("#txtLoginName").val().trim();
-    var tbPassword1 = $("#tbPassword1").val().trim();
-    var tbPassword2 = $("#tbPassword2").val().trim();
-    var username = $("#tbTrueName").val().trim();
-    var company = $("#tbUnit").val().trim();
-    var job = $("#txtTitle").val().trim();
-    var telephone = $("#tbPhoneNamber").val().trim();
-    var mobile = $("#tbMobleNamber").val().trim();
-    var address = $("#tbAdress").val().trim();
-    var zip = $("#txtZip").val().trim();
-    var mail = $("#tbEmaill").val().trim();
-
-
     $.ajax({
         url: "/userRegister",
         type: "post",

@@ -1,5 +1,6 @@
 package com.adcc.raim.controller;
 
+import com.adcc.raim.Tools.DataTime;
 import com.adcc.raim.Tools.LoadYML;
 import com.adcc.raim.Tools.UUIDgenerator;
 import com.adcc.raim.Tools.UserUtil;
@@ -8,7 +9,6 @@ import com.adcc.raim.service.UserService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
+import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
@@ -299,7 +300,7 @@ public class UserController {
 
 
     /**
-     * 根据用户名查询（点击用户名，查看用户信息）
+     * 点击用户名，查看用户信息
      * @return
      */
     @RequestMapping(value = "/findByName")
@@ -369,11 +370,11 @@ public class UserController {
 
 
     /**
-     * 根据用户名查询(修改用户信息)
+     * 点击修改个人信息跳转的页面(跳转到修改信息的页面)
      * @return
      */
-    @RequestMapping(value = "/userUpdate")
-    public ModelAndView userUpdate(HttpSession session) {
+    @RequestMapping(value = "/userUpdateView")
+    public ModelAndView userUpdateView(HttpSession session) {
         ModelAndView result;
         try {
             result =new ModelAndView("userUpdate");
@@ -403,21 +404,21 @@ public class UserController {
             logger.error(e.getMessage());
             return result;
         }
-
     }
 
 
     /**
-     * 修改
+     * 修改个人信息
      * @return
      */
     @ResponseBody
-    @RequestMapping(value = "/userUpdateCommit", method = RequestMethod.POST)
-    public ModelMap userUpdateCommit(HttpSession session,String username,String company,String job,String telephone,String mobile,String address,String zip,String mail) {
-        ModelMap result = new ModelMap();
+    @RequestMapping(value = "/userUpdate", method = RequestMethod.POST)
+    public ModelMap userUpdate(HttpSession session,User user) {
+            ModelMap result = new ModelMap();
         try {
             String loginname = (String) session.getAttribute("loginname");
-            int result1 = userService.userUpdate(username,company,job,telephone,mobile,address,zip,mail,loginname);
+            user.setLoginname(loginname);
+            int result1 = userService.userUpdate(user);
             if(result1>0){
                 result.put("msg", "succ");
             }else {
@@ -439,12 +440,12 @@ public class UserController {
      * @return
      */
     @RequestMapping(value = "/updatePass")
-    public  ModelAndView  updatePass(HttpSession session,Model model) {
+    public  ModelAndView  updatePass(HttpSession session) {
         ModelAndView result;
         try {
             result= new  ModelAndView("userPassUpdate");
             String loginname = (String) session.getAttribute("loginname");
-            model.addAttribute("loginname",loginname);
+            result.addObject("loginname",loginname);
             return result;
         }catch (Exception e){
             result= new  ModelAndView("error");
@@ -507,12 +508,17 @@ public class UserController {
         try {
             user.setUserid(UUIDgenerator.generateUuid());
             user.setPassword(UserUtil.MD5(user.getPassword()));
-            //用户类型(-1：管理员,0：注册用户,1：行业用户,2：webservice用户)，注册时是行业用户
-            user.setUsertype(1);
+            //用户类型(-1：管理员,0：注册用户,1：行业用户,2：webservice用户)，注册时是注册用户
+            user.setUsertype(0);
             //审批结果(-1：审批中, 0：未通过审批, 1：通过审批)，注册时是审批中
             user.setAuditresult(-1);
             //用户状态(0：无效 1：有效),注册时是无效的
             user.setUserstate(0);
+            // new Date()为获取当前系统时间
+            Timestamp time = DataTime.getInstance().getDataTime();
+            user.setRegdate(time);
+            user.setAppdate(time);
+            user.setAuditdate(time);
             int result1 = userService.userRegister(user);
             if(result1>0){
                 result.put("msg", "succ");

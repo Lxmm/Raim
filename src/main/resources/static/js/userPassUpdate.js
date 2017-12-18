@@ -32,7 +32,7 @@ function userPassUpdate() {
             var msg = data.msg;
             if (msg == "succ") {
                 alert("修改密码成功！");
-                window.location.href = "/findByName";
+                window.location.href = "/userLogin";
             }else{
                 $("#lbError").empty();
                 $("#lbError").append(msg);

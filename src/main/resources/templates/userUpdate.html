@@ -1,5 +1,5 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns:th="http://www.thymeleaf.org">
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head id="Head1"><title>
     系统概述-民航GNSS导航卫星完好性监测系统
 </title>
@@ -131,6 +131,7 @@
     </script>
 </head>
 <body>
+<!--@thymesVar id="loginname" type="java.lang.String"-->
 <input type="hidden" th:value="${loginname}" id="loginname">
 <form method="post" action="/userLoginSuccess" id="form1">
     <div class="aspNetHidden">
@@ -160,7 +161,8 @@
                                                 用户名：</div>
                                         </td>
                                         <td width="207" class="p11">
-                                            &nbsp;<span id="txtLoginName" th:text="${loginname}"></span>
+                                            &nbsp;<!--@thymesVar id="loginname" type="java.lang.String"-->
+                                            <span id="txtLoginName" th:text="${loginname}"></span>
                                         </td>
                                         <td width="207" class="p11">
                                             <div id="divNameError">
@@ -173,7 +175,8 @@
                                                 真实姓名：</div>
                                         </td>
                                         <td width="207" class="p11">
-                                            &nbsp;<input name="tbTrueName" type="text" id="tbTrueName" style="width: 150px" onblur="getBytesCount(this,50)" maxlength="50" th:value="${username}"/>
+                                            &nbsp;<!--@thymesVar id="username" type="java.lang.String"-->
+                                            <input name="username" type="text" id="tbTrueName" style="width: 150px" onblur="getBytesCount(this,50)" maxlength="50" th:value="${username}"/>
                                             <span style="color: Red;">*</span>
                                         </td>
                                         <td width="207" class="p11">
@@ -186,7 +189,8 @@
                                                 工作单位：</div>
                                         </td>
                                         <td width="207" height="29" class="p11">
-                                            &nbsp;<input name="tbUnit" type="text" id="tbUnit" style="width: 150px" onblur="getBytesCount(this,100)" maxlength="100" th:value="${company}" />
+                                            &nbsp;<!--@thymesVar id="company" type="java.lang.String"-->
+                                            <input name="company" type="text" id="tbUnit" style="width: 150px" onblur="getBytesCount(this,100)" maxlength="100" th:value="${company}" />
                                             <span style="color: Red;">*</span>
                                         </td>
                                         <td width="207" height="29" class="p11">
@@ -199,7 +203,8 @@
                                                 工作职务：</div>
                                         </td>
                                         <td width="207" height="28" class="p11">
-                                            &nbsp;<input name="txtTitle" type="text" id="txtTitle" style="width: 150px" onblur="getBytesCount(this,100)" maxlength="100" th:value="${job}" />
+                                            &nbsp;<!--@thymesVar id="job" type="java.lang.String"-->
+                                            <input name="job" type="text" id="txtTitle" style="width: 150px" onblur="getBytesCount(this,100)" maxlength="100" th:value="${job}" />
                                         </td>
                                         <td width="207" height="28" class="p11">
                                             &nbsp;
@@ -211,7 +216,8 @@
                                                 电话号码：</div>
                                         </td>
                                         <td width="207" height="28" class="p11">
-                                            &nbsp;<input name="tbPhoneNamber" type="text" id="tbPhoneNamber" style="width: 150px" onblur="getBytesCount(this,20)" maxlength="20" th:value="${telephone}" />
+                                            &nbsp;<!--@thymesVar id="telephone" type="java.lang.String"-->
+                                            <input name="telephone" type="text" id="tbPhoneNamber" style="width: 150px" onblur="getBytesCount(this,20)" maxlength="20" th:value="${telephone}" />
                                             <span style="color: Red;">*</span>
                                         </td>
                                         <td width="207" height="28" class="p11">
@@ -224,7 +230,8 @@
                                                 手机号码：</div>
                                         </td>
                                         <td width="207" height="28" class="p11">
-                                            &nbsp;<input name="tbMobleNamber" type="text" id="tbMobleNamber" style="width: 150px" onblur="getBytesCount(this,20)" maxlength="15" th:value="${mobile}"/>&nbsp;
+                                            &nbsp;<!--@thymesVar id="mobile" type="java.lang.String"-->
+                                            <input name="mobile" type="text" id="tbMobleNamber" style="width: 150px" onblur="getBytesCount(this,20)" maxlength="15" th:value="${mobile}"/>&nbsp;
                                         </td>
                                         <td width="207" height="28" class="p11">
                                     </tr>
@@ -234,7 +241,8 @@
                                                 <span>地址</span>：</div>
                                         </td>
                                         <td width="207" height="28" class="p11">
-                                            &nbsp;<input name="tbAdress" type="text" id="tbAdress" style="width: 150px" onblur="getBytesCount(this,200)" maxlength="200" th:value="${address}" />
+                                            &nbsp;<!--@thymesVar id="address" type="java.lang.String"-->
+                                            <input name="address" type="text" id="tbAdress" style="width: 150px" onblur="getBytesCount(this,200)" maxlength="200" th:value="${address}" />
                                             <span style="color: Red;">*</span>
                                         </td>
                                         <td width="207" height="28" class="p11">
@@ -247,7 +255,8 @@
                                                 邮编：</div>
                                         </td>
                                         <td width="207" height="28" class="p11">
-                                            &nbsp;<input name="txtZip" type="text" id="txtZip" style="width: 150px" onblur="getBytesCount(this,20)" maxlength="20" th:value="${zip}"/>
+                                            &nbsp;<!--@thymesVar id="zip" type="java.lang.String"-->
+                                            <input name="zip" type="text" id="txtZip" style="width: 150px" onblur="getBytesCount(this,20)" maxlength="20" th:value="${zip}"/>
                                         </td>
                                         <td width="207" height="28" class="p11" />
                                     </tr>
@@ -257,7 +266,8 @@
                                                 EMAIL：</div>
                                         </td>
                                         <td width="207" height="28" class="p11">
-                                            &nbsp;<input name="tbEmaill" type="text" id="tbEmaill" style="width: 150px" onblur="getBytesCount(this,50)" maxlength="50" th:value="${mail}" />
+                                            &nbsp;<!--@thymesVar id="mail" type="java.lang.String"-->
+                                            <input name="mail" type="text" id="tbEmaill" style="width: 150px" onblur="getBytesCount(this,50)" maxlength="50" th:value="${mail}" />
                                         </td>
                                         <td width="207" height="28" class="p11" />
                                     </tr>
@@ -276,7 +286,7 @@
                                     </tr>
                                     <tr>
                                         <td colspan="3" style="text-align: center;">
-                                            <input type="button" name="tbUpdate" value="提交" onclick="userUpdateCommit();" id="tbUpdate" />
+                                            <input type="button" name="tbUpdate" value="提交" onclick="userUpdate();" id="tbUpdate" />
                                             &nbsp;&nbsp;
                                             <input type="button" name="btBack" value="返回" onclick="history.back()" id="btBack" />
                                         </td>

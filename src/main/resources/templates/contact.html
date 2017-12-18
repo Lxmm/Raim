@@ -51,6 +51,7 @@
     </script>
 </head>
 <body>
+<!--@thymesVar id="loginname" type="java.lang.String"-->
 <input type="hidden" th:value="${loginname}" id="loginname">
 <form method="post" action="contact.html" id="form1">
     <div class="aspNetHidden">
@@ -73,27 +74,42 @@
                     <table style="padding-top:30px;" width="90%"  border="0" align="center" cellpadding="0" cellspacing="0">
                         <tr>
                             <td style="height:25px;margin-left:5px;width:100%;text-align: left;" >
-                                &nbsp;<img src="image/bull_infomation_01.gif" width="11" height="11"/>&nbsp;<span id="rpContact_lbCorpname_0" th:text="${corpname}"></span></td>
+                                &nbsp;<img src="image/bull_infomation_01.gif" width="11" height="11"/>&nbsp;
+                                <!--@thymesVar id="corpname" type="java.lang.String"-->
+                                <span id="rpContact_lbCorpname_0" th:text="${corpname}"></span></td>
                         </tr>
                         <tr>
-                            <td style="height:25px;margin-left:5px;width:100%;padding-left:5px;">地址：<span id="rpContact_lbAddress_0" th:text="${address}"></span></td>
-                        </tr>
-                        <tr>
-                            <td style="height:25px;margin-left:5px;width:100%;padding-left:5px;">邮编：<span id="rpContact_lbZip_0" th:text="${zip}"></span></td>
-                        </tr>
-                        <tr>
-                            <td style="height:25px;margin-left:5px;width:100%;padding-left:5px;">电话：<span id="rpContact_lbPhone_0" th:text="${phone}"></span></td>
-                        </tr>
-                        <tr>
-                            <td style="height:25px;margin-left:5px;width:100%;padding-left:5px;">传真：<span id="rpContact_lbFax_0" th:text="${fax}"></span></td>
+                            <td style="height:25px;margin-left:5px;width:100%;padding-left:5px;">地址：
+                                <!--@thymesVar id="address" type="java.lang.String"-->
+                            <span id="rpContact_lbAddress_0" th:text="${address}"></span></td>
                         </tr>
                         <tr>
 
-                            <td style="height:25px;margin-left:5px;width:100%;padding-left:5px;">邮箱：<a id="rpContact_hlEmail_0" href="mailto:hugzh@adcc.co" target="_blank"><span id="rpContact_lbEmail_0" th:text="${email}"></span></a></td>
+                            <td style="height:25px;margin-left:5px;width:100%;padding-left:5px;">邮编：
+                                <!--@thymesVar id="zip" type="java.lang.String"-->
+                                <span id="rpContact_lbZip_0" th:text="${zip}"></span></td>
+                        </tr>
+                        <tr>
+                            <td style="height:25px;margin-left:5px;width:100%;padding-left:5px;">电话：
+                                <!--@thymesVar id="phone" type="java.lang.String"-->
+                                <span id="rpContact_lbPhone_0" th:text="${phone}"></span></td>
+                        </tr>
+                        <tr>
+                            <td style="height:25px;margin-left:5px;width:100%;padding-left:5px;">传真：
+                                <!--@thymesVar id="fax" type="java.lang.String"-->
+                                <span id="rpContact_lbFax_0" th:text="${fax}"></span></td>
                         </tr>
                         <tr>
 
-                            <td style="height:25px;margin-left:5px;width:100%;padding-left:5px;">网址：<a id="rpContact_hlwww_0" href="http://www.adcc.com.cn" target="_blank"><span id="rpContact_lbwww_0" th:text="${www}"></span></a></td>
+                            <td style="height:25px;margin-left:5px;width:100%;padding-left:5px;">邮箱：<a id="rpContact_hlEmail_0" href="mailto:hugzh@adcc.co" target="_blank">
+                                <!--@thymesVar id="email" type="java.lang.String"-->
+                                <span id="rpContact_lbEmail_0" th:text="${email}"></span></a></td>
+                        </tr>
+                        <tr>
+
+                            <td style="height:25px;margin-left:5px;width:100%;padding-left:5px;">网址：<a id="rpContact_hlwww_0" href="http://www.adcc.com.cn" target="_blank">
+                                <!--@thymesVar id="www" type="java.lang.String"-->
+                                <span id="rpContact_lbwww_0" th:text="${www}"></span></a></td>
                         </tr>
                         <tr>
                             <td height="25">&nbsp;</td>

@@ -108,7 +108,7 @@
             var str = document.getElementById(id).value
             var bytesCouont = 0;
             if (str != null) {
-                for (var i = 0; i < str.length; i++) {
+                for (var i = 0; i &lt; str.length; i++) {
                     var c = str.charAt(i);
                     if (/^[\u0000-\u00ff]$/.test(c)) {
                         bytesCouont += 1;
@@ -123,7 +123,7 @@
                 document.getElementById("divErrorinfo").style.color = "red";
                 document.getElementById(id).focus();
             }
-            else if (bytesCouont == 0 && id == "txtLoginName") {
+            else if (bytesCouont == 0 &amp;&amp; id == "txtLoginName") {
                 document.getElementById("divNameError").innerHTML = "用户名不可为空";
             }
             else {
@@ -166,6 +166,7 @@
     </script>
 </head>
 <body>
+<!--@thymesVar id="username" type="java.lang.String"-->
 <input type="hidden" th:value="${username}" id="loginname">
 <form method="post" action="userRegister.html" id="form1">
     <div class="aspNetHidden">

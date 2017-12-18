@@ -20,7 +20,7 @@ $(function(){
      */
     $("#weMenu1_lbRegedit").click(function(){
         $.ajax({
-            type: 'POST',
+            type: 'post',
             async: true,  //同步请求
             url: '/loginOut',
             dataType: "json",

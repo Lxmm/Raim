@@ -19,7 +19,7 @@ public interface UserDAO {
 
     User findByName(@Param("loginname")String loginname);
 
-    int userUpdate(@Param("username")String username,@Param("company")String company,@Param("job")String job,@Param("telephone")String telephone,@Param("mobile")String mobile,@Param("address")String address,@Param("zip")String zip,@Param("mail")String mail,@Param("loginname")String loginname);
+    int userUpdate(User user);
 
     int userPassUpdate(@Param("tbNewPass")String tbNewPass,@Param("loginname")String loginname);
 
